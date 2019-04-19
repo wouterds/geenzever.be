@@ -1,4 +1,5 @@
 import Layout from 'components/Layout';
+import Head from 'next/head';
 import { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Form } from 'semantic-ui-react';
@@ -16,6 +17,11 @@ const RequestStickers = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>
+          {t('page.get-stickers.title')} - {t('website.title')}
+        </title>
+      </Head>
       <Container>
         <h2>{t('page.get-stickers.title')}</h2>
         <p>
