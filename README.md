@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/wouterds/geenzever.be.svg?style=shield&circle-token=3f21cbae8f4a5c29d5f68ebce406d45b6fd6c14c)](https://circleci.com/gh/wouterds/geenzever.be)
 
-[![mock--yellow.jpg](resources/images/mock--yellow.jpg?raw=true)](https://geenzever.be)
+[![mock--yellow.jpg](resources/static/mock--yellow.jpg?raw=true)](https://geenzever.be)
 
 ## Setup
 

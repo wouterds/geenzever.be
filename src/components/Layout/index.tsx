@@ -37,7 +37,7 @@ const Layout = (props: Props) => {
         <meta
           key="og:image"
           property="og:image"
-          content={`${process.env.BASE_URL}/static/images/mock--yellow.jpg`}
+          content={`${process.env.BASE_URL}/static/mock--yellow.jpg`}
         />
         <meta
           key="twitter:card"
@@ -47,7 +47,7 @@ const Layout = (props: Props) => {
         <meta
           key="twitter:image"
           name="twitter:image"
-          content={`${process.env.BASE_URL}/static/images/mock--yellow.jpg`}
+          content={`${process.env.BASE_URL}/static/mock--yellow.jpg`}
         />
       </Head>
 

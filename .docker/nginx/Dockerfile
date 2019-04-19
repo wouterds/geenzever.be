@@ -1,6 +1,6 @@
 FROM nginx:1.15-alpine
 
 COPY ./.docker/nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY ./resources/images /code/static/images
+COPY ./resources/static /code/static
 
 WORKDIR /code
