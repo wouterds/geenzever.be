@@ -10,6 +10,9 @@ const Navigation = () => {
       <Link href="/get-stickers">
         <a>{t('nav.stickers')}</a>
       </Link>
+      <Link href="/support-us">
+        <a>{t('nav.support-us')}</a>
+      </Link>
     </Container>
   );
 };
