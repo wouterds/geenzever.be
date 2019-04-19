@@ -19,7 +19,6 @@ app
   .then(() => {
     const server = express();
 
-    server.use('/static', express.static('/static'));
     server.get('*', handlers.Wildcard(app));
 
     server.listen(port, (e: string) => {

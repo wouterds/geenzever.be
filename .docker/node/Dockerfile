@@ -7,7 +7,6 @@ RUN npm install --only=production
 
 COPY ./dist/app ./.next
 COPY ./dist/server/ ./
-COPY ./resources/images ./static
 
 FROM node:10-alpine
 

@@ -36,7 +36,7 @@ const Landing = () => {
         />
       </p>
 
-      <Img src="/static/mock--yellow.jpg" />
+      <Img src="/static/images/mock--yellow.jpg" />
 
       <p>
         <Link href="/get-stickers" prefetch passHref>
