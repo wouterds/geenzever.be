@@ -19,7 +19,7 @@ const Layout = (props: Props) => {
   const { t } = useTranslation();
   const { children } = props;
 
-  const seoImage = `${process.env.BASE_URL}/static/mock--yellow.jpg`
+  const seoImage = `${process.env.BASE_URL}/static/mock--yellow.jpg`;
 
   return (
     <>
