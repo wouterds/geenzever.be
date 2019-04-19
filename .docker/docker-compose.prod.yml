@@ -1,17 +1,20 @@
 version: '2'
 
 services:
-  node:
-    image: docker.wouterdeschuyter.be/geenzever-website-node
-    restart: unless-stopped
+  nginx:
+    image: docker.wouterdeschuyter.be/geenzever-website-nginx
     environment:
       - VIRTUAL_HOST=geenzever.be
-      - VIRTUAL_PORT=3000
       - LETSENCRYPT_HOST=geenzever.be
       - LETSENCRYPT_EMAIL=wouter.de.schuyter@gmail.com
+    restart: unless-stopped
     networks:
       - default
       - webproxy
+    mem_limit: 8m
+
+  node:
+    image: docker.wouterdeschuyter.be/geenzever-website-node
     mem_limit: 64m
 
 networks:
