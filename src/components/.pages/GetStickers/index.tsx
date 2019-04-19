@@ -17,12 +17,12 @@ const RequestStickers = () => {
   return (
     <Layout>
       <Container>
-        <h2>{t('page.request-stickers.title')}</h2>
+        <h2>{t('page.get-stickers.title')}</h2>
         <p>
-          {t('page.request-stickers.text-p1')}
+          {t('page.get-stickers.text-p1')}
           <br />
           <Trans
-            i18nKey="page.request-stickers.text-p2"
+            i18nKey="page.get-stickers.text-p2"
             components={[<strong>text</strong>]}
           />
         </p>
