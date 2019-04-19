@@ -91,7 +91,7 @@ strong {
 }
 
 #nprogress .bar {
-  background: #CCC;
+  background: #DDD;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -106,7 +106,7 @@ strong {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #CCC, 0 0 5px #CCC;
+  box-shadow: 0 0 10px #DDD, 0 0 5px #DDD;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
       -ms-transform: rotate(3deg) translate(0px, -4px);
