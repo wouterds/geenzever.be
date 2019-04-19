@@ -78,7 +78,7 @@ strong {
 .ui.form input[type=text]:focus,
 .ui.form input[type=time]:focus,
 .ui.form input[type=url]:focus {
-  border-color: #34495e;
+  border-color: #2980b9;
 }
 
 .ui.form .field,
