@@ -19,6 +19,8 @@ const Layout = (props: Props) => {
   const { t } = useTranslation();
   const { children } = props;
 
+  const seoImage = `${process.env.BASE_URL}/static/mock--yellow.jpg`
+
   return (
     <>
       <Head>
@@ -29,26 +31,14 @@ const Layout = (props: Props) => {
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
         <meta name="robots" content="index, follow" />
-        <meta
-          key="og:site_name"
-          property="og:site_name"
-          content={t('seo.site-name')}
-        />
-        <meta
-          key="og:image"
-          property="og:image"
-          content={`${process.env.BASE_URL}/static/mock--yellow.jpg`}
-        />
-        <meta
-          key="twitter:card"
-          name="twitter:card"
-          content="summary_large_image"
-        />
-        <meta
-          key="twitter:image"
-          name="twitter:image"
-          content={`${process.env.BASE_URL}/static/mock--yellow.jpg`}
-        />
+        <meta property="og:site_name" content={t('seo.site-name')} />
+        <meta property="og:title" content={t('seo.title')} />
+        <meta property="og:description" content={t('seo.description')} />
+        <meta property="og:image" content={seoImage} />
+        <meta name="twitter:title" content={t('seo.title')} />
+        <meta name="twitter:description" content={t('seo.description')} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={seoImage} />
       </Head>
 
       <BaseCSS />

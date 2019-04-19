@@ -2,11 +2,11 @@
   "website": {
     "title": "GEEN ZEVER",
     "copyright": "© {{year}} geenzever.be",
-    "seo": {
-      "site-name": "GEEN ZEVER",
-      "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
-      "description": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingspamfletten ongewenst zijn."
-    }
+  },
+  "seo": {
+    "site-name": "GEEN ZEVER",
+    "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
+    "description": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingspamfletten ongewenst zijn."
   },
   "cta": {
     "request-sticker": "Vraag nu je <0>gratis</0> sticker aan!",
