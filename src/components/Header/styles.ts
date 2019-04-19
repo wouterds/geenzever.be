@@ -32,3 +32,12 @@ export const LogoWrapper = styled(Col)`
     }
   }
 `;
+
+export const NavigationWrapper = styled(Col)`
+  display: none;
+  justify-content: flex-end;
+
+  ${breakpoint('sm')`
+    display: flex;
+  `}
+`;
