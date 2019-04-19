@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "module": "commonjs",
+    "target": "es2017",
+    "listEmittedFiles": true,
+    "removeComments": true,
+    "noEmit": false,
+    "sourceMap": false,
+    "outDir": "./dist/server",
+  },
+  "files": [
+    "./src/server/index.ts",
+  ],
+}

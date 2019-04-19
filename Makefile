@@ -1,0 +1,38 @@
+PWD = $(shell pwd)
+VERSION = $(shell cat package.json | grep "\"version\"" | sed -e 's/^.*: "\(.*\)".*/\1/')
+PROJECT = $(shell cat package.json | grep "\"name\"" | sed -e 's/^.*: "\(.*\)".*/\1/')
+
+DOCKERFILE_NODE = ./.docker/node/Dockerfile
+
+TAG_NODE = $(DOCKER_REGISTRY_HOST)/$(PROJECT)${ENV_SUFFIX}-node
+
+all: build
+
+clean:
+	-rm -rf node_modules
+	-rm -rf dist
+
+node_modules: package.json
+	docker run --rm -v $(PWD):/code -v ~/.ssh:/root/.ssh -w /code node:10-slim npm install
+
+lint: node_modules
+	docker run --rm -v $(PWD):/code -w /code node:10-slim npm run lint
+
+.build-app: node_modules
+	docker run --rm -v $(PWD):/code -w /code --env=BASE_URL=$(BASE_URL) node:10-slim npm run build
+	touch .build-app
+
+.build-node: .build-app $(DOCKERFILE_NODE)
+	docker build --build-arg=VERSION=$(VERSION) -f $(DOCKERFILE_NODE) -t $(TAG_NODE) .
+	touch .build-node
+
+build: .build-node
+	docker tag $(TAG_NODE) $(TAG_NODE):$(VERSION)
+
+push: build
+	docker push $(TAG_NODE)
+	docker push $(TAG_NODE):$(VERSION)
+
+deploy:
+	ssh ${DEPLOY_USER}@${DEPLOY_SERVER} "cd ${DEPLOY_LOCATION}${ENV_SUFFIX}; docker-compose pull"
+	ssh ${DEPLOY_USER}@${DEPLOY_SERVER} "cd ${DEPLOY_LOCATION}${ENV_SUFFIX}; docker-compose up -d"

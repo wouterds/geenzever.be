@@ -1,0 +1,44 @@
+{
+  "website": {
+    "title": "GEEN ZEVER",
+    "copyright": "© {{year}} geenzever.be",
+    "seo": {
+      "site-name": "GEEN ZEVER",
+      "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
+      "description": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingspamfletten ongewenst zijn."
+    }
+  },
+  "cta": {
+    "request-sticker": "Vraag nu je <0>gratis</0> sticker aan!",
+    "send": "Verzenden!"
+  },
+  "label": {
+    "email": "E-mailadres",
+    "street-and-number": "Straat & huisnummer",
+    "bus-number": "Busnummer",
+    "postal-code": "Postcode",
+    "city": "Stad"
+  },
+  "placeholder": {
+    "email": "Geef je e-mailadres in",
+    "street-and-number": "Geef je straat + huisnummer in",
+    "bus-number": "Geef je busnummer in",
+    "postal-code": "Geef je postcode in",
+    "city": "Geef je stad in"
+  },
+  "page": {
+    "error": {
+      "title": "Oh nee!",
+      "text": "Er ging iets mis tijdens het laden van deze pagina :(..<br />Probeer het later nog eens opnieuw."
+    },
+    "landing": {
+      "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
+      "text": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingspamfletten <0>ongewenst zijn</0>."
+    },
+    "request-stickers": {
+      "title": "Sticker aanvragen",
+      "text-p1": "Vul onderstaand formulier in en dan stuur ik je zo snel mogelijk een sticker op.",
+      "text-p2": "Wanneer je de sticker ontvangen hebt, vergeet dan niet te delen op sociale media (<0>#geenzever</0>)!"
+    }
+  }
+}

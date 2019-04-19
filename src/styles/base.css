@@ -1,0 +1,133 @@
+@import '~reset-css/reset.css';
+
+html,
+body,
+#__next {
+  min-height: 100%;
+  height: 100%;
+}
+
+#__next {
+  background: #fff;
+  color: #000;
+  font-family: Public Sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  margin-top: 15px;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + form {
+  margin-top: 25px;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.ui.button {
+  font-weight: 500;
+}
+
+.ui.form .field > label,
+.ui.form .inline.field > label,
+.ui.form .inline.field > p,
+.ui.form .inline.fields .field > label,
+.ui.form .inline.fields .field > p,
+.ui.form .inline.fields > label {
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.ui.form input:not([type]):focus,
+.ui.form input[type=date]:focus,
+.ui.form input[type=datetime-local]:focus,
+.ui.form input[type=email]:focus,
+.ui.form input[type=file]:focus,
+.ui.form input[type=number]:focus,
+.ui.form input[type=password]:focus,
+.ui.form input[type=search]:focus,
+.ui.form input[type=tel]:focus,
+.ui.form input[type=text]:focus,
+.ui.form input[type=time]:focus,
+.ui.form input[type=url]:focus {
+  border-color: #34495e;
+}
+
+.ui.form .field,
+.ui.form .field:last-child {
+  margin: 0 0 1em;
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #CCC;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #CCC, 0 0 5px #CCC;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
