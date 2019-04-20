@@ -14,8 +14,6 @@ services:
     build:
       context: ./..
       dockerfile: ./.docker/node/Dockerfile
-    volumes:
-      - ../dist:/code/dist
     restart: unless-stopped
     ports:
       - "3001:3001"
