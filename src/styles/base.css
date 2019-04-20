@@ -1,4 +1,5 @@
 @import '~reset-css/reset.css';
+@import '~semantic-ui-css/components/form.min.css';
 
 html,
 body,
@@ -49,10 +50,6 @@ p + form {
 
 strong {
   font-weight: 400;
-}
-
-.ui.button {
-  font-weight: 500;
 }
 
 .ui.form .field > label,

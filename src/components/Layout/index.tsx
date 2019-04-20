@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import 'semantic-ui-css/semantic.min.css';
 import { BaseCSS } from 'styled-bootstrap-grid';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles';
