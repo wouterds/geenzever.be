@@ -5,8 +5,8 @@ WORKDIR /code
 COPY ./package*.json ./
 RUN npm install --only=production
 
-COPY ./dist/app ./.next
 COPY ./dist/server/ ./
+COPY ./dist/app ./.next
 
 FROM node:10-alpine
 
