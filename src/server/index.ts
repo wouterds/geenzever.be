@@ -1,5 +1,6 @@
 // tslint:disable-next-line
 require('dotenv').config();
+import bodyparser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import next from 'next';
@@ -21,6 +22,7 @@ app
     const server = express();
 
     server.use(cors());
+    server.use(bodyparser());
     server.get('*', handlers.Wildcard(app));
     server.post('/api/request-stickers', handlers.Api.RequestStickers);
 
