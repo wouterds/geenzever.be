@@ -6,6 +6,7 @@
     "lint": "tslint --format stylish './src/**/*.ts' './src/**/*.tsx' && stylelint './src/**/*.ts'",
     "lint:fix": "tslint --format stylish --fix './src/**/*.ts' './src/**/*.tsx' && stylelint --fix './src/**/*.ts'",
     "build": "NODE_ENV=production next build ./src && NODE_ENV=production tsc -p ./tsconfig.server.json",
+    "sync:models": "ts-node -r ./src/bootstrap ./src/scripts/sync-models",
     "dev": "next ./src",
     "server": "NODE_ENV=production node ."
   },
