@@ -11,9 +11,11 @@ services:
       - MYSQL_ROOT_PASSWORD=root
 
   node:
-    build:
-      context: ./..
-      dockerfile: ./.docker/node/Dockerfile
+    image: node:10-slim
+    command: ["./node_modules/.bin/ts-node", "-r", "./src/bootstrap", "./src/server"]
+    volumes:
+      - ./../:/code
+    working_dir: /code
     restart: unless-stopped
     ports:
       - "3001:3001"
