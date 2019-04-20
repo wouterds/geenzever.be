@@ -16,7 +16,12 @@ services:
   node:
     image: docker.wouterdeschuyter.be/geenzever-website-node
     mem_limit: 64m
+    networks:
+      - default
+      - database
 
 networks:
   webproxy:
+    external: true
+  database:
     external: true
