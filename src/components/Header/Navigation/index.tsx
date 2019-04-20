@@ -7,10 +7,10 @@ const Navigation = () => {
 
   return (
     <Container>
-      <Link href="/get-stickers">
+      <Link href="/get-stickers" prefetch>
         <a>{t('nav.stickers')}</a>
       </Link>
-      <Link href="/support">
+      <Link href="/support" prefetch>
         <a>{t('nav.support')}</a>
       </Link>
     </Container>
