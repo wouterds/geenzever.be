@@ -1,5 +1,6 @@
 .vscode/
 .build-*
 .env
+.docker/data/
 node_modules/
 dist/
