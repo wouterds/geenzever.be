@@ -1,5 +1,5 @@
-import { DataTypes } from 'sequelize';
-import db from 'services/database';
+import { DataTypes, Model } from 'sequelize';
+import sequelize from 'services/database';
 
 export interface Definition {
   id: string;
@@ -16,8 +16,8 @@ export interface Definition {
   sentAt?: Date | null;
 }
 
-export default db.define(
-  'sticker-request',
+class StickerRequest extends Model {}
+StickerRequest.init(
   {
     id: {
       primaryKey: true,
@@ -37,6 +37,8 @@ export default db.define(
     sentAt: { type: DataTypes.DATE, allowNull: true },
   },
   {
+    sequelize,
+    modelName: 'sticker-request',
     indexes: [
       {
         unique: true,
@@ -57,3 +59,5 @@ export default db.define(
     ],
   },
 );
+
+export default StickerRequest;
