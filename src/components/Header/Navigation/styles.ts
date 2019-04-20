@@ -11,6 +11,7 @@ export const Container = styled.nav`
       margin-left: 5px;
     }
 
+    &.active,
     &:hover {
       color: #686de0;
     }
