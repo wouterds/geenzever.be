@@ -11,6 +11,7 @@
     "outDir": "./dist/server"
   },
   "files": [
-    "./src/server/index.ts"
+    "./src/bootstrap.ts",
+    "./src/server/index.ts",
   ]
 }
