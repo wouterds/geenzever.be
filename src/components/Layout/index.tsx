@@ -29,7 +29,7 @@ const Layout = (props: Props) => {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
-        <meta name="robots" content="index, follow" />
+        <meta key="robots" name="robots" content="index, follow" />
         <meta property="og:site_name" content={t('seo.site-name')} />
         <meta property="og:title" content={t('seo.title')} />
         <meta property="og:description" content={t('seo.description')} />

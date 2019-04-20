@@ -10,6 +10,7 @@ const Support = () => {
     <Layout>
       <Head>
         <title>{t('page.support.completed.title')}</title>
+        <meta key="robots" name="robots" content="noindex" />
       </Head>
       <Container>
         <h2>{t('page.support.completed.title')}</h2>

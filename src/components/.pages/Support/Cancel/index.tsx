@@ -20,6 +20,7 @@ const Support = () => {
     <Layout>
       <Head>
         <title>{t('page.support.cancel.title')}</title>
+        <meta key="robots" name="robots" content="noindex" />
       </Head>
       <Container>
         <h2>{t('page.support.cancel.title')}</h2>
