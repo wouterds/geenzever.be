@@ -20,6 +20,7 @@ app
     const server = express();
 
     server.get('*', handlers.Wildcard(app));
+    server.post('/api/request-stickers', handlers.RequestStickers);
 
     server.listen(port, (e: string) => {
       if (e) {
