@@ -28,10 +28,10 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true
   },
   "exclude": [
     "node_modules",
-    "dist",
-  ],
+    "dist"
+  ]
 }

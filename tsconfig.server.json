@@ -8,9 +8,9 @@
     "removeComments": true,
     "noEmit": false,
     "sourceMap": false,
-    "outDir": "./dist/server",
+    "outDir": "./dist/server"
   },
   "files": [
-    "./src/server/index.ts",
-  ],
+    "./src/server/index.ts"
+  ]
 }
