@@ -1,5 +1,6 @@
 @import '~reset-css/reset.css';
 @import '~semantic-ui-css/components/form.min.css';
+@import '~semantic-ui-css/components/message.min.css';
 
 html,
 body,
@@ -11,10 +12,14 @@ body,
 #__next {
   background: #fff;
   color: #000;
-  font-family: Public Sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.6;
   font-size: 1rem;
+}
+
+#__next,
+.ui.message .header {
+  font-family: Public Sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -81,6 +86,12 @@ strong {
 .ui.form .field,
 .ui.form .field:last-child {
   margin: 0 0 1em;
+}
+
+.ui.message .header,
+.ui.message .header:not(.ui) {
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 a {

@@ -35,6 +35,24 @@
     "postal-code": "Geef je postcode in",
     "city": "Geef je stad in"
   },
+  "feedback": {
+    "bad-request": {
+      "title": "Probleem",
+      "text": "Controleer of alle velden correct zijn ingevuld."
+    },
+    "already-requested": {
+      "title": "Aanvraag geweigerd",
+      "text": "Het ziet er naar uit dat je al een sticker hebt aangevraagd."
+    },
+    "generic-error": {
+      "title": "Fout opgetreden",
+      "text": "Er ging iets mis, probeer het later opnieuw."
+    },
+    "sticker-request-success": {
+      "title": "Hoera, sticker is aangevraagd!",
+      "text": "Je ontvangt nog een bevestigingsmailtje, eens bevestigd doe ik 'm zo snel mogelijk op de post!"
+    }
+  },
   "page": {
     "error": {
       "title": "Oh nee!",
