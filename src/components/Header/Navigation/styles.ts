@@ -3,6 +3,7 @@ import { styled } from 'styles';
 export const Container = styled.nav`
   a {
     color: #666;
+    text-decoration: none;
 
     + a {
       margin-left: 15px;
