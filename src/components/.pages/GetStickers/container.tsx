@@ -56,6 +56,11 @@ export default function withContainer<Props>(
 
         setStatus('SUCCESS');
       } catch (e) {
+        if (!(e && e.response)) {
+          setStatus('ERROR');
+          return;
+        }
+
         const { status: statusCode } = e.response;
 
         if (statusCode === CONFLICT) {
