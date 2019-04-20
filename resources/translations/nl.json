@@ -17,6 +17,8 @@
     "support": "Steunen"
   },
   "label": {
+    "first-name": "Voornaam",
+    "last-name": "Achternaam",
     "email": "E-mailadres",
     "street-and-number": "Straat & huisnummer",
     "bus-number": "Busnummer",
@@ -24,6 +26,8 @@
     "city": "Stad"
   },
   "placeholder": {
+    "first-name": "Geef je voornaam in",
+    "last-name": "Geef je achternaam in",
     "email": "Geef je e-mailadres in",
     "street-and-number": "Geef je straat + huisnummer in",
     "bus-number": "Geef je busnummer in",

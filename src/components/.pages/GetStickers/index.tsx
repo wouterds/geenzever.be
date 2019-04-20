@@ -9,6 +9,8 @@ import { Container } from './styles';
 
 const RequestStickers = () => {
   const { t } = useTranslation();
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [streetAndNumber, setStreetAndNumber] = useState('');
   const [busNumber, setBusNumber] = useState('');
@@ -18,9 +20,7 @@ const RequestStickers = () => {
   return (
     <Layout>
       <Head>
-        <title>
-          {t('page.get-stickers.title')}
-        </title>
+        <title>{t('page.get-stickers.title')}</title>
       </Head>
       <Container>
         <h2>{t('page.get-stickers.title')}</h2>
@@ -37,6 +37,8 @@ const RequestStickers = () => {
           onSubmit={() =>
             // tslint:disable-next-line
             console.log({
+              firstName,
+              lastName,
               email,
               streetAndNumber,
               busNumber,
@@ -45,6 +47,28 @@ const RequestStickers = () => {
             })
           }
         >
+          <Row>
+            <Col sm={6} className="field">
+              <label htmlFor="firstName">{t('label.first-name')} *</label>
+              <input
+                id="firstName"
+                placeholder={t('placeholder.first-name')}
+                required
+                value={firstName}
+                onChange={(e: any) => setFirstName(e.target.value)}
+              />
+            </Col>
+            <Col sm={6} className="field">
+              <label htmlFor="lastName">{t('label.last-name')} *</label>
+              <input
+                id="lastName"
+                placeholder={t('placeholder.last-name')}
+                required
+                value={lastName}
+                onChange={(e: any) => setLastName(e.target.value)}
+              />
+            </Col>
+          </Row>
           <Row>
             <Col sm={12} className="field">
               <label htmlFor="email">{t('label.email')} *</label>
