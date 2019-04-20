@@ -50,7 +50,9 @@ const RequestStickers = (props: Props) => {
         </p>
 
         <Form
-          onSubmit={() =>
+          onSubmit={(e: any) => {
+            e.preventDefault();
+
             requestStickers(
               firstName,
               lastName,
@@ -59,8 +61,8 @@ const RequestStickers = (props: Props) => {
               busNumber,
               postalCode,
               city,
-            )
-          }
+            ).catch();
+          }}
         >
           <Row>
             <Col sm={6} className="field">
