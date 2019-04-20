@@ -20,24 +20,17 @@ export const Container = styled.div`
 export const PayPalButtonAndQRCode = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 15px;
-  flex-direction: column;
-  max-width: 200px;
 
   > img {
     width: 100%;
     max-width: 200px;
-    margin-top: 10px;
+    margin-left: 50px;
+    display: none;
   }
 
   ${breakpoint('sm')`
-    margin-top: 0;
-    flex-direction: row;
-    max-width: auto;
-
     > img {
-      margin-left: 50px;
-      margin-top: 0;
+      display: block;
     }
   `}
 `;
