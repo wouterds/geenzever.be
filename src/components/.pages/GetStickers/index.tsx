@@ -19,7 +19,7 @@ const RequestStickers = () => {
     <Layout>
       <Head>
         <title>
-          {t('page.get-stickers.title')} - {t('website.title')}
+          {t('page.get-stickers.title')}
         </title>
       </Head>
       <Container>

@@ -10,7 +10,7 @@ const Support = () => {
     <Layout>
       <Head>
         <title>
-          {t('page.support.title')} - {t('website.title')}
+          {t('page.support.title')}
         </title>
       </Head>
       <Container>
