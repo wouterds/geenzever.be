@@ -34,10 +34,13 @@ export const LogoWrapper = styled(Col)`
 `;
 
 export const NavigationWrapper = styled(Col)`
-  display: none;
-  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
 
   ${breakpoint('sm')`
-    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    margin-top: 0;
   `}
 `;
