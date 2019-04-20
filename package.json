@@ -31,6 +31,7 @@
     "styled-bootstrap-grid": "^3.0.2",
     "styled-components": "^4.2.0",
     "styled-components-breakpoint": "^2.1.1",
+    "tsconfig-paths": "^3.8.0",
     "validator": "^10.11.0"
   },
   "devDependencies": {
@@ -63,7 +64,6 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.6.0",
     "ts-node": "^8.1.0",
-    "tsconfig-paths": "^3.8.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
