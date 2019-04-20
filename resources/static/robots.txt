@@ -1,4 +1,5 @@
 User-Agent: *
 Allow: /
+Disallow: /support/completed
 
 Sitemap: https://geenzever.be/sitemap.xml
