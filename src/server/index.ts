@@ -4,7 +4,7 @@ import express from 'express';
 import next from 'next';
 import handlers from './handlers';
 
-const port = 3000;
+const port = 3001;
 const config: { [key: string]: string | boolean } = {};
 
 if (process.env.NODE_ENV !== 'production') {

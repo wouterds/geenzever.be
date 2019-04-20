@@ -18,4 +18,4 @@ services:
       - ../dist:/code/dist
     restart: unless-stopped
     ports:
-      - "80:3000"
+      - "3001:3001"
