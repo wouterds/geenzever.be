@@ -1,6 +1,6 @@
-import { breakpoint, styled } from 'styles';
+import { breakpoint, css, styled } from 'styles';
 
-export const Button = styled.button`
+export const Button = styled.button<{ disabled: boolean }>`
   background: #000;
   display: block;
   padding: 13px 10px;
@@ -13,6 +13,13 @@ export const Button = styled.button`
   cursor: pointer;
   border: 0;
   outline: 0;
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      cursor: not-allowed;
+      background: #222;
+    `}
 
   &:hover {
     background: #222;
