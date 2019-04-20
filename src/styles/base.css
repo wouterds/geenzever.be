@@ -75,7 +75,7 @@ strong {
 .ui.form input[type=text]:focus,
 .ui.form input[type=time]:focus,
 .ui.form input[type=url]:focus {
-  border-color: #2980b9;
+  border-color: #686de0;
 }
 
 .ui.form .field,
@@ -83,12 +83,20 @@ strong {
   margin: 0 0 1em;
 }
 
+a {
+  color: #686de0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 #nprogress {
   pointer-events: none;
 }
 
 #nprogress .bar {
-  background: #DDD;
+  background: #686de0;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -103,7 +111,7 @@ strong {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #DDD, 0 0 5px #DDD;
+  box-shadow: 0 0 10px #686de0, 0 0 5px #686de0;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
       -ms-transform: rotate(3deg) translate(0px, -4px);

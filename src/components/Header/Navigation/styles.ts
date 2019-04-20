@@ -12,7 +12,7 @@ export const Container = styled.nav`
     }
 
     &:hover {
-      color: #000;
+      color: #686de0;
     }
   }
 `;
