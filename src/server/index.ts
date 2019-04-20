@@ -1,7 +1,7 @@
 // tslint:disable-next-line
 require('dotenv').config();
-import * as express from 'express';
-import * as next from 'next';
+import express from 'express';
+import next from 'next';
 import handlers from './handlers';
 
 const port = 3000;
