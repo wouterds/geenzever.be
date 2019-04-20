@@ -5,9 +5,24 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Form } from 'semantic-ui-react';
 import { Col, Row } from 'styled-bootstrap-grid';
 import { Button } from 'styles/button';
+import withContainer from './container';
 import { Container } from './styles';
 
-const RequestStickers = () => {
+interface Props {
+  status: string | null;
+  isLoading: boolean;
+  requestStickers: (
+    firstName: string,
+    lastName: string,
+    email: string,
+    streetAndNumber: string,
+    busNumber: string,
+    postalCode: string,
+    city: string,
+  ) => Promise<void>;
+}
+
+const RequestStickers = (props: Props) => {
   const { t } = useTranslation();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -16,6 +31,7 @@ const RequestStickers = () => {
   const [busNumber, setBusNumber] = useState('');
   const [postalCode, setPostalCode] = useState('');
   const [city, setCity] = useState('');
+  const { requestStickers } = props;
 
   return (
     <Layout>
@@ -35,8 +51,7 @@ const RequestStickers = () => {
 
         <Form
           onSubmit={() =>
-            // tslint:disable-next-line
-            console.log({
+            requestStickers(
               firstName,
               lastName,
               email,
@@ -44,7 +59,7 @@ const RequestStickers = () => {
               busNumber,
               postalCode,
               city,
-            })
+            )
           }
         >
           <Row>
@@ -137,4 +152,4 @@ const RequestStickers = () => {
   );
 };
 
-export default RequestStickers;
+export default withContainer(RequestStickers);
