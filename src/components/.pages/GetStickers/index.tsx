@@ -31,7 +31,7 @@ const RequestStickers = (props: Props) => {
   const [busNumber, setBusNumber] = useState('');
   const [postalCode, setPostalCode] = useState('');
   const [city, setCity] = useState('');
-  const { requestStickers } = props;
+  const { status, requestStickers } = props;
 
   return (
     <Layout>
@@ -52,6 +52,10 @@ const RequestStickers = (props: Props) => {
         <Form
           onSubmit={(e: any) => {
             e.preventDefault();
+
+            if (status === 'LOADING') {
+              return;
+            }
 
             requestStickers(
               firstName,
@@ -145,8 +149,13 @@ const RequestStickers = (props: Props) => {
             </Col>
           </Row>
 
-          <Button type="submit" style={{ marginTop: 10 }}>
-            {t('cta.send')}
+          <Button
+            type="submit"
+            style={{ marginTop: 10 }}
+            disabled={status === 'LOADING'}
+          >
+            {status === 'LOADING' && t('label.loading')}
+            {status !== 'LOADING' && t('cta.send')}
           </Button>
         </Form>
       </Container>

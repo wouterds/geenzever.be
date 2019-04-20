@@ -23,7 +23,8 @@
     "street-and-number": "Straat & huisnummer",
     "bus-number": "Busnummer",
     "postal-code": "Postcode",
-    "city": "Stad"
+    "city": "Stad",
+    "loading": "Laden.."
   },
   "placeholder": {
     "first-name": "Geef je voornaam in",
