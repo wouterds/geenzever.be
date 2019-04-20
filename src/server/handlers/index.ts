@@ -1,5 +1,5 @@
-import Wildcard from './wildcard';
 import Api from './api';
+import Wildcard from './wildcard';
 
 export default {
   Wildcard,
