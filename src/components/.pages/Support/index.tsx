@@ -3,22 +3,22 @@ import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import { Container, PayPalButtonAndQRCode } from './styles';
 
-const SupportUs = () => {
+const Support = () => {
   const { t } = useTranslation();
 
   return (
     <Layout>
       <Head>
         <title>
-          {t('page.support-us.title')} - {t('website.title')}
+          {t('page.support.title')} - {t('website.title')}
         </title>
       </Head>
       <Container>
-        <h2>{t('page.support-us.title')}</h2>
+        <h2>{t('page.support.title')}</h2>
         <p>
-          {t('page.support-us.text-p1')}
+          {t('page.support.text-p1')}
           <br />
-          {t('page.support-us.text-p2')}
+          {t('page.support.text-p2')}
         </p>
 
         <br />
@@ -38,4 +38,4 @@ const SupportUs = () => {
   );
 };
 
-export default SupportUs;
+export default Support;
