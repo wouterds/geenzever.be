@@ -52,6 +52,11 @@
         "title": "Bedankt!",
         "text-p1": "Je bijdrage wordt geapprecieerd, alweer een aantal stickers meer!",
         "text-p2": "Indien je meer dan €5 hebt gegeven en wat extra stickers wilt, stuur een mailtje naar <0>info@geenzever.be</0>."
+      },
+      "cancel": {
+        "title": "Geannuleerd",
+        "text-p1": "Je donatie werd geannuleerd.",
+        "text-p2": "Indien je je toch nog bedenkt en wat extra stickers wilt, <0>geef dan meer dan €5</0>!"
       }
     }
   }
