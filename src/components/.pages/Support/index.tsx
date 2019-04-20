@@ -26,7 +26,7 @@ const Support = () => {
         <PayPalButtonAndQRCode>
           <a
             rel="nofollow"
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SCMRY9L4M43E&source=url"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QCJ7SGSYW2H5Q&source=url"
           >
             <img src="/static/paypal-donate-button.png" width="200px" />
           </a>
