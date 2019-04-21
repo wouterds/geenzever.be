@@ -1,8 +1,30 @@
 import Layout from 'components/Layout';
+import { withRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
+import Error from '../Error';
+import withContainer from './container';
 
-const StickerRequest = () => {
+interface Props {
+  stickerRequest: {
+    id: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    street: string;
+    bus: string;
+    postalCode: string;
+    city: string;
+    note: string;
+  } | null;
+}
+
+const StickerRequest = (props: Props) => {
   const { t } = useTranslation();
+  const { stickerRequest } = props;
+
+  if (!stickerRequest) {
+    return <Error />;
+  }
 
   return (
     <Layout>
@@ -12,4 +34,4 @@ const StickerRequest = () => {
   );
 };
 
-export default StickerRequest;
+export default withRouter(withContainer(StickerRequest));
