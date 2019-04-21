@@ -35,7 +35,7 @@
     "bus": "Geef je busnummer in",
     "postal-code": "Geef je postcode in",
     "city": "Geef je stad in",
-    "note": "Optioneel: als je nog iets te zeggen hebt kan dat hier!"
+    "note": "Optioneel: als je nog iets anders te zeggen hebt dan kan dat hier!"
   },
   "feedback": {
     "bad-request": {
@@ -64,7 +64,7 @@
   "page": {
     "error": {
       "title": "Oh nee!",
-      "text": "Er ging iets mis tijdens het laden van deze pagina :(..<br />Probeer het later nog eens opnieuw."
+      "text": "Er ging iets mis tijdens het laden van deze pagina..<br />Probeer het later nog eens opnieuw."
     },
     "landing": {
       "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
