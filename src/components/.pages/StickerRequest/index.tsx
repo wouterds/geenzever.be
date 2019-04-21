@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Message } from 'semantic-ui-react';
 import Error from '../Error';
 import withContainer from './container';
+import { Container } from './styles';
 
 interface Props {
   stickerRequest: {
@@ -42,49 +43,53 @@ const StickerRequest = (props: Props) => {
         <meta key="robots" name="robots" content="noindex" />
       </Head>
 
-      <h2>{t('page.sticker-request.title')}</h2>
+      <Container>
+        <h2>{t('page.sticker-request.title')}</h2>
 
-      {justConfirmed && (
-        <Message positive compact>
-          <Message.Header>
-            {t('feedback.sticker-request.confirmed.title')}
-          </Message.Header>
-          <p>{t('feedback.sticker-request.confirmed.text')}</p>
-        </Message>
-      )}
+        {justConfirmed && (
+          <Message positive compact>
+            <Message.Header>
+              {t('feedback.sticker-request.confirmed.title')}
+            </Message.Header>
+            <p>{t('feedback.sticker-request.confirmed.text')}</p>
+          </Message>
+        )}
 
-      {!justConfirmed && !stickerRequest.rejectedAt && !stickerRequest.sentAt && (
-        <Message warning compact>
-          <Message.Header>
-            {t('feedback.sticker-request.pending.title')}
-          </Message.Header>
-          <p>{t('feedback.sticker-request.pending.text')}</p>
-        </Message>
-      )}
+        {!justConfirmed &&
+          !stickerRequest.rejectedAt &&
+          !stickerRequest.sentAt && (
+            <Message warning compact>
+              <Message.Header>
+                {t('feedback.sticker-request.pending.title')}
+              </Message.Header>
+              <p>{t('feedback.sticker-request.pending.text')}</p>
+            </Message>
+          )}
 
-      {stickerRequest.rejectedAt && (
-        <Message negative compact>
-          <Message.Header>
-            {t('feedback.sticker-request.rejected.title')}
-          </Message.Header>
-          <p>{t('feedback.sticker-request.rejected.text')}</p>
-        </Message>
-      )}
+        {stickerRequest.rejectedAt && (
+          <Message negative compact>
+            <Message.Header>
+              {t('feedback.sticker-request.rejected.title')}
+            </Message.Header>
+            <p>{t('feedback.sticker-request.rejected.text')}</p>
+          </Message>
+        )}
 
-      {stickerRequest.sentAt && (
-        <Message positive compact>
-          <Message.Header>
-            {t('feedback.sticker-request.sent.title')}
-          </Message.Header>
-          <p>
-            {t('feedback.sticker-request.sent.text', {
-              sentAt: formatTime(stickerRequest.sentAt, 'dddd D MMMM YYYY', {
-                locale: dateFnsLocale,
-              }),
-            })}
-          </p>
-        </Message>
-      )}
+        {stickerRequest.sentAt && (
+          <Message positive compact>
+            <Message.Header>
+              {t('feedback.sticker-request.sent.title')}
+            </Message.Header>
+            <p>
+              {t('feedback.sticker-request.sent.text', {
+                sentAt: formatTime(stickerRequest.sentAt, 'dddd D MMMM YYYY', {
+                  locale: dateFnsLocale,
+                }),
+              })}
+            </p>
+          </Message>
+        )}
+      </Container>
     </Layout>
   );
 };
