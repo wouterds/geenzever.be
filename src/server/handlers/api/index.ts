@@ -1,5 +1,5 @@
-import RequestStickers from './request-stickers';
+import StickerRequests from './sticker-requests';
 
 export default {
-  RequestStickers,
+  StickerRequests,
 };

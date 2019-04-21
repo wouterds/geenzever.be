@@ -48,7 +48,7 @@ export default function withContainer<Props>(
 
       try {
         const { status: statusCode } = await ApiService.post(
-          '/request-stickers',
+          '/sticker-requests',
           payload,
         );
 
