@@ -15,12 +15,28 @@ export const LogoWrapper = styled(Col)`
   h1 {
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 2.5rem;
     margin: 0;
+    font-size: 3rem;
 
-    ${breakpoint('sm')`
-      font-size: 3rem;
-    `}
+    @media (max-width: 480px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 415px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 367px) {
+      font-size: 2.1rem;
+    }
+
+    @media (max-width: 355px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 345px) {
+      font-size: 1.84rem;
+    }
   }
 
   a {
@@ -37,9 +53,9 @@ export const NavigationWrapper = styled(Col)`
   display: flex;
   align-items: center;
   margin-top: 5px;
+  justify-content: flex-end;
 
   ${breakpoint('sm')`
-    justify-content: flex-end;
     margin-bottom: 15px;
     margin-top: 0;
   `}
