@@ -4,6 +4,7 @@ import bodyparser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import next from 'next';
+import sentry from 'services/sentry';
 import translation from 'services/translation';
 import handlers from './handlers';
 
@@ -41,6 +42,8 @@ app
   .catch(e => {
     // tslint:disable-next-line
     console.error(e.stack);
+
+    sentry.captureException(e);
 
     process.exit(1);
   });
