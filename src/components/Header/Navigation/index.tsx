@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SingletonRouter, withRouter } from 'next/router';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container } from './styles';
 
@@ -10,13 +11,14 @@ interface Props {
 const Navigation = (props: Props) => {
   const { t } = useTranslation();
   const { pathname } = props.router;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Container>
-      <button>
+      <button onClick={() => setIsOpen(!isOpen)}>
         <img src={require('@resources/images/menu.svg')} />
       </button>
-      <ul>
+      <ul className={isOpen ? 'open' : undefined}>
         <li>
           <Link href="/get-stickers" prefetch>
             <a

@@ -9,6 +9,10 @@ export const Container = styled.div`
     background: #000;
     border-radius: 5px;
 
+    &.open {
+      display: inline-block;
+    }
+
     li {
       display: block;
 
@@ -45,12 +49,6 @@ export const Container = styled.div`
     cursor: pointer;
     margin-top: -4px;
     padding: 0;
-
-    &:hover + ul,
-    &:active + ul,
-    &:focus + ul {
-      display: inline-block;
-    }
 
     img {
       width: 36px;
