@@ -14,9 +14,7 @@ const Navigation = (props: Props) => {
   return (
     <Container>
       <button>
-        <img
-          src={require('@resources/images/menu.svg')}
-        />
+        <img src={require('@resources/images/menu.svg')} />
       </button>
       <ul>
         <li>
@@ -32,7 +30,11 @@ const Navigation = (props: Props) => {
         </li>
         <li>
           <Link href="/support" prefetch>
-            <a className={pathname.indexOf('/support') > -1 ? 'active' : undefined}>
+            <a
+              className={
+                pathname.indexOf('/support') > -1 ? 'active' : undefined
+              }
+            >
               {t('nav.support')}
             </a>
           </Link>
