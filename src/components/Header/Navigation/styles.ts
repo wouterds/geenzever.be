@@ -8,6 +8,7 @@ export const Container = styled.div`
     right: 0;
     background: #000;
     border-radius: 5px;
+    z-index: 1;
 
     &.open {
       display: inline-block;
