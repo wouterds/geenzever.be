@@ -8,7 +8,16 @@ export const Container = styled(BootstrapContainer)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0.3;
+  color: #aaa;
+
+  a {
+    color: #aaa;
+    text-decoration: none;
+
+    &:hover {
+      color: #686de0;
+    }
+  }
 
   ${breakpoint('sm')`
     padding: 50px 35px 30px;

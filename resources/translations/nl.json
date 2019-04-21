@@ -10,7 +10,8 @@
   },
   "cta": {
     "request-sticker": "Vraag nu je <0>gratis</0> sticker aan!",
-    "send": "Verzenden!"
+    "send": "Verzenden!",
+    "contact": "contact"
   },
   "nav": {
     "stickers": "Stickers",
