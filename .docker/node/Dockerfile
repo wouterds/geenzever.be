@@ -7,6 +7,7 @@ RUN npm install --only=production
 
 COPY ./dist/server/ ./
 COPY ./dist/app ./.next
+COPY ./resources/translations ./resources/translations
 
 FROM node:10-alpine
 
