@@ -82,6 +82,9 @@
       "text-p1": "Vul onderstaand formulier in en dan stuur ik je zo snel mogelijk een sticker op.",
       "text-p2": "Wanneer je de sticker ontvangen hebt, vergeet dan niet te delen op sociale media (<0>#geenzever</0>)!"
     },
+    "sticker-request": {
+      "title": "Sticker aanvraag"
+    },
     "support": {
       "title": "Steunen",
       "text-p1": "Alles kost geld. Ook stickers (€ 0.46 / st), envelopen (€ 0.07 / st) en postzegels (€ 0.92 / st).",
