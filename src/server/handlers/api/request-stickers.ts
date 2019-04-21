@@ -58,6 +58,9 @@ export default async (req: Request, res: Response): Promise<Response> => {
       }),
     );
   } catch (e) {
+    // tslint:disable-next-line
+    console.error(e);
+
     if (e.name === 'SequelizeUniqueConstraintError') {
       return res.sendStatus(CONFLICT);
     }
