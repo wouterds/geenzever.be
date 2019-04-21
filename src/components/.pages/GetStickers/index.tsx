@@ -54,7 +54,7 @@ const RequestStickers = (props: Props) => {
       </Head>
       <Container>
         {status === 'SUCCESS' && (
-          <Message positive compact>
+          <Message positive>
             <Message.Header>
               {t('feedback.sticker-request-success.title')}
             </Message.Header>
@@ -73,7 +73,7 @@ const RequestStickers = (props: Props) => {
               />
             </p>
             {status === 'ERROR_BAD_REQUEST' && (
-              <Message warning compact>
+              <Message warning>
                 <Message.Header>
                   {t('feedback.bad-request.title')}
                 </Message.Header>
@@ -81,7 +81,7 @@ const RequestStickers = (props: Props) => {
               </Message>
             )}
             {status === 'ERROR_DUPLICATE' && (
-              <Message negative compact>
+              <Message negative>
                 <Message.Header>
                   {t('feedback.already-requested.title')}
                 </Message.Header>
@@ -89,7 +89,7 @@ const RequestStickers = (props: Props) => {
               </Message>
             )}
             {status === 'ERROR' && (
-              <Message negative compact>
+              <Message negative>
                 <Message.Header>
                   {t('feedback.generic-error.title')}
                 </Message.Header>

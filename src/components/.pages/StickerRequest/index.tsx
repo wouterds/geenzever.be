@@ -47,7 +47,7 @@ const StickerRequest = (props: Props) => {
         <h2>{t('page.sticker-request.title')}</h2>
 
         {justConfirmed && (
-          <Message positive compact>
+          <Message positive>
             <Message.Header>
               {t('feedback.sticker-request.confirmed.title')}
             </Message.Header>
@@ -58,7 +58,7 @@ const StickerRequest = (props: Props) => {
         {!justConfirmed &&
           !stickerRequest.rejectedAt &&
           !stickerRequest.sentAt && (
-            <Message warning compact>
+            <Message warning>
               <Message.Header>
                 {t('feedback.sticker-request.pending.title')}
               </Message.Header>
@@ -67,7 +67,7 @@ const StickerRequest = (props: Props) => {
           )}
 
         {stickerRequest.rejectedAt && (
-          <Message negative compact>
+          <Message negative>
             <Message.Header>
               {t('feedback.sticker-request.rejected.title')}
             </Message.Header>
@@ -76,7 +76,7 @@ const StickerRequest = (props: Props) => {
         )}
 
         {stickerRequest.sentAt && (
-          <Message positive compact>
+          <Message positive>
             <Message.Header>
               {t('feedback.sticker-request.sent.title')}
             </Message.Header>
