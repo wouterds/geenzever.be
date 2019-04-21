@@ -46,7 +46,7 @@ export default function withContainer<Props>(
       res.statusCode = INTERNAL_SERVER_ERROR;
     }
 
-    return { isServer, status, stickerRequest };
+    return { isServer, stickerRequest };
   };
 
   return Component;

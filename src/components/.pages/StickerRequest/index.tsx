@@ -1,5 +1,4 @@
 import Layout from 'components/Layout';
-import { withRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import Error from '../Error';
 import withContainer from './container';
@@ -34,4 +33,4 @@ const StickerRequest = (props: Props) => {
   );
 };
 
-export default withRouter(withContainer(StickerRequest));
+export default withContainer(StickerRequest);
