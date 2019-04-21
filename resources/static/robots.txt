@@ -2,5 +2,7 @@ User-Agent: *
 Allow: /
 Disallow: /support/completed
 Disallow: /support/cancel
+Disallow: /sticker-request
+Disallow: /sticker-request/*
 
 Sitemap: https://geenzever.be/sitemap.xml
