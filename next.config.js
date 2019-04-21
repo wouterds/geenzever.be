@@ -40,6 +40,10 @@ module.exports = withPlugins([
       })
     ];
 
+    if (!isServer) {
+      config.resolve.alias['@sentry/node'] = '@sentry/browser'
+    }
+
     return config;
   },
   ...config,
