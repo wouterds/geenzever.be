@@ -4,6 +4,7 @@ import bodyparser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import next from 'next';
+import translation from 'services/translation';
 import handlers from './handlers';
 
 const port = 3001;
@@ -30,6 +31,8 @@ app
       if (e) {
         throw e;
       }
+
+      translation.init();
 
       // tslint:disable-next-line
       console.log(`> Ready on http://localhost:${port}`);
