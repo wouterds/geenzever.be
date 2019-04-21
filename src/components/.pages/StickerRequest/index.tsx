@@ -1,4 +1,5 @@
 import Layout from 'components/Layout';
+import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import Error from '../Error';
 import withContainer from './container';
@@ -27,8 +28,11 @@ const StickerRequest = (props: Props) => {
 
   return (
     <Layout>
+      <Head>
+        <meta key="robots" name="robots" content="noindex" />
+      </Head>
+
       <h2>{t('page.sticker-request.title')}</h2>
-      <meta key="robots" name="robots" content="noindex" />
     </Layout>
   );
 };
