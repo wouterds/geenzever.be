@@ -51,13 +51,14 @@ const RequestStickers = (props: Props) => {
         <title>{t('page.get-stickers.title')}</title>
       </Head>
       <Container>
-        {status === 'SUCCESS' &&
-              <Message positive compact>
-                <Message.Header>
-                  {t('feedback.sticker-request-success.title')}
-                </Message.Header>
-                <p>{t('feedback.sticker-request-success.text')}</p>
-              </Message>}
+        {status === 'SUCCESS' && (
+          <Message positive compact>
+            <Message.Header>
+              {t('feedback.sticker-request-success.title')}
+            </Message.Header>
+            <p>{t('feedback.sticker-request-success.text')}</p>
+          </Message>
+        )}
         {status !== 'SUCCESS' && (
           <>
             <h2>{t('page.get-stickers.title')}</h2>
