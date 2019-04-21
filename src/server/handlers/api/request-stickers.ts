@@ -43,7 +43,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
       note: note ? note : null,
     });
 
-    const url = `${process.env.BASE_URL}/get-stickers/${stickerRequest.id}`;
+    const url = `${process.env.BASE_URL}/sticker-request/${stickerRequest.id}`;
 
     await sendMail(
       [stickerRequest.email],
