@@ -14,6 +14,9 @@ WORKDIR /code
 
 COPY --from=0 /code /code
 
+ARG VERSION
+ENV VERSION=$VERSION
+
 EXPOSE 3000
 
 CMD ["npm", "run", "server"]
