@@ -25,7 +25,7 @@ lint: node_modules
 	touch .build-app
 
 .build-nginx: $(DOCKERFILE_NGINX)
-	docker build --build-arg=VERSION=$(VERSION) -f $(DOCKERFILE_NGINX) -t $(TAG_NGINX) .
+	docker build -f $(DOCKERFILE_NGINX) -t $(TAG_NGINX) .
 	touch .build-nginx
 
 .build-node: .build-app $(DOCKERFILE_NODE)
