@@ -12,6 +12,7 @@ jobs:
             echo 'export API_BASE_URL="$API_BASE_URL"' >> $BASH_ENV
             echo 'export MODE="$MODE"' >> $BASH_ENV
             echo 'export SENTRY_DSN="$SENTRY_DSN"' >> $BASH_ENV
+            echo 'export GA_TRACKING_ID="$GA_TRACKING_ID"' >> $BASH_ENV
       - restore_cache:
           keys:
           - dependencies-{{ checksum "package.json" }}
