@@ -7,6 +7,7 @@ import {
 } from 'http-status';
 import StickerRequest from 'models/sticker-request';
 import { sendMail } from 'services/mail';
+import sentry from 'services/sentry';
 import { t } from 'services/translation';
 import { isEmail } from 'validator';
 
@@ -60,6 +61,8 @@ export default async (req: Request, res: Response): Promise<Response> => {
   } catch (e) {
     // tslint:disable-next-line
     console.error(e);
+
+    sentry.captureException(e);
 
     if (e.name === 'SequelizeUniqueConstraintError') {
       return res.sendStatus(CONFLICT);
