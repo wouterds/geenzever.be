@@ -6,8 +6,8 @@ export interface Definition {
   firstName: string;
   lastName: string;
   email: string;
-  streetAndNumber: string;
-  busNumber?: string | null;
+  street: string;
+  bus?: string | null;
   postalCode: string;
   city: string;
   note?: string | null;
@@ -28,8 +28,8 @@ StickerRequest.init(
     firstName: { type: DataTypes.STRING(32), allowNull: false },
     lastName: { type: DataTypes.STRING(32), allowNull: false },
     email: { type: DataTypes.STRING(64), allowNull: false },
-    streetAndNumber: { type: DataTypes.STRING(64), allowNull: false },
-    busNumber: { type: DataTypes.STRING(8), allowNull: true },
+    street: { type: DataTypes.STRING(64), allowNull: false },
+    bus: { type: DataTypes.STRING(8), allowNull: true },
     postalCode: { type: DataTypes.STRING(8), allowNull: false },
     city: { type: DataTypes.STRING(32), allowNull: false },
     note: { type: DataTypes.TEXT, allowNull: true },

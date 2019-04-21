@@ -15,8 +15,8 @@ interface Props {
     firstName: string,
     lastName: string,
     email: string,
-    streetAndNumber: string,
-    busNumber: string,
+    street: string,
+    bus: string,
     postalCode: string,
     city: string,
     note: string,
@@ -28,8 +28,8 @@ const RequestStickers = (props: Props) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [streetAndNumber, setStreetAndNumber] = useState('');
-  const [busNumber, setBusNumber] = useState('');
+  const [street, setStreet] = useState('');
+  const [bus, setBus] = useState('');
   const [postalCode, setPostalCode] = useState('');
   const [city, setCity] = useState('');
   const [note, setNote] = useState('');
@@ -109,8 +109,8 @@ const RequestStickers = (props: Props) => {
                   firstName,
                   lastName,
                   email,
-                  streetAndNumber,
-                  busNumber,
+                  street,
+                  bus,
                   postalCode,
                   city,
                   note,
@@ -154,24 +154,22 @@ const RequestStickers = (props: Props) => {
               </Row>
               <Row>
                 <Col sm={8} className="field">
-                  <label htmlFor="streetAndNumber">
-                    {t('label.street-and-number')} *
-                  </label>
+                  <label htmlFor="street">{t('label.street')} *</label>
                   <input
-                    id="streetAndNumber"
-                    placeholder={t('placeholder.street-and-number')}
+                    id="street"
+                    placeholder={t('placeholder.street')}
                     required
-                    value={streetAndNumber}
-                    onChange={(e: any) => setStreetAndNumber(e.target.value)}
+                    value={street}
+                    onChange={(e: any) => setStreet(e.target.value)}
                   />
                 </Col>
                 <Col sm={4} className="field">
-                  <label htmlFor="busNumber">{t('label.bus-number')}</label>
+                  <label htmlFor="bus">{t('label.bus')}</label>
                   <input
-                    id="busNumber"
-                    placeholder={t('placeholder.bus-number')}
-                    value={busNumber}
-                    onChange={(e: any) => setBusNumber(e.target.value)}
+                    id="bus"
+                    placeholder={t('placeholder.bus')}
+                    value={bus}
+                    onChange={(e: any) => setBus(e.target.value)}
                   />
                 </Col>
               </Row>

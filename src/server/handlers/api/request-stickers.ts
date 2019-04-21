@@ -15,21 +15,14 @@ export default async (req: Request, res: Response): Promise<Response> => {
     firstName,
     lastName,
     email,
-    streetAndNumber,
-    busNumber,
+    street,
+    bus,
     postalCode,
     city,
     note,
   } = req.body;
 
-  if (
-    !firstName ||
-    !lastName ||
-    !email ||
-    !streetAndNumber ||
-    !postalCode ||
-    !city
-  ) {
+  if (!firstName || !lastName || !email || !street || !postalCode || !city) {
     return res.sendStatus(BAD_REQUEST);
   }
 
@@ -42,8 +35,8 @@ export default async (req: Request, res: Response): Promise<Response> => {
       firstName,
       lastName,
       email,
-      streetAndNumber,
-      busNumber: busNumber ? busNumber : null,
+      street,
+      bus: bus ? bus : null,
       postalCode,
       city,
       note: note ? note : null,
