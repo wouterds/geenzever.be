@@ -47,7 +47,15 @@ export default async (req: Request, res: Response): Promise<Response> => {
     await sendMail(
       [stickerRequest.email],
       t('mail.stickers-requested.subject'),
-      t('mail.stickers-requested.text', { firstName, url }),
+      t('mail.stickers-requested.text', {
+        firstName,
+        lastName,
+        street,
+        bus,
+        postalCode,
+        city,
+        url,
+      }),
     );
   } catch (e) {
     if (e.name === 'SequelizeUniqueConstraintError') {

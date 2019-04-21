@@ -58,7 +58,7 @@
   "mail": {
     "stickers-requested": {
       "subject": "Sticker aangevraagd!",
-      "text": "Hey {{firstName}}\n\nJouw sticker is gereserveerd, gelieve te bevestigen via onderstaande link.\n{{- url}}\n\nDe groetjes\nGEEN ZEVER"
+      "text": "Hey {{firstName}}\n\n\nJouw sticker werd gereserveerd op onderstaande gegevens.\n\n{{firstName}} {{lastName}}\n{{street}} {{bus}}\n{{postalCode}} {{city}}\n\nGelieve te bevestigen via onderstaande link.\n{{- url}}\n\n\nGroetjes\nGEEN ZEVER"
     }
   },
   "page": {
