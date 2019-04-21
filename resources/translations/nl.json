@@ -58,11 +58,11 @@
     "sticker-request": {
       "confirmed": {
         "title": "Bevestigd",
-        "text": "Je aanvraag werd bevestigd."
+        "text": "Bedankt, je aanvraag werd bevestigd!"
       },
       "pending": {
         "title": "Voorbereiding",
-        "text": "Zodra ik alles op voorraad heb zal verstuur ik je sticker!"
+        "text": "Hang on, ik verstuur je sticker zo snel mogelijk!"
       },
       "rejected": {
         "title": "Afgekeurd",
