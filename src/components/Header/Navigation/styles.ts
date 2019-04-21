@@ -46,6 +46,7 @@ export const Container = styled.div`
     margin-top: -4px;
     padding: 0;
 
+    &:hover + ul,
     &:active + ul,
     &:focus + ul {
       display: inline-block;
