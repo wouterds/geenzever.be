@@ -28,6 +28,7 @@ app
     server.get('*', handlers.Wildcard(app));
     server.get('/sticker-request/:id', handlers.StickerRequest);
     server.post('/api/sticker-requests', handlers.Api.StickerRequests.Add);
+    server.get('/api/sticker-requests/:id', handlers.Api.StickerRequests.Get);
 
     server.listen(port, (e: string) => {
       if (e) {
