@@ -12,7 +12,6 @@ export interface Definition {
   city: string;
   note?: string | null;
   emailConfirmedAt?: Date | null;
-  approvedAt?: Date | null;
   rejectedAt?: Date | null;
   sentAt?: Date | null;
 }
@@ -34,7 +33,6 @@ StickerRequest.init(
     city: { type: DataTypes.STRING(32), allowNull: false },
     note: { type: DataTypes.TEXT, allowNull: true },
     emailConfirmedAt: { type: DataTypes.DATE, allowNull: true },
-    approvedAt: { type: DataTypes.DATE, allowNull: true },
     rejectedAt: { type: DataTypes.DATE, allowNull: true },
     sentAt: { type: DataTypes.DATE, allowNull: true },
   },
@@ -48,9 +46,6 @@ StickerRequest.init(
       },
       {
         fields: ['emailConfirmedAt'],
-      },
-      {
-        fields: ['approvedAt'],
       },
       {
         fields: ['createdAt'],
