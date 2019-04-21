@@ -13,6 +13,11 @@ export default async (req: Request, res: Response): Promise<Response> => {
       return res.sendStatus(NOT_FOUND);
     }
 
+    if (!stickerRequest.emailConfirmedAt) {
+      stickerRequest.emailConfirmedAt = new Date();
+      stickerRequest.save();
+    }
+
     return res.json(stickerRequest);
   } catch (e) {
     // tslint:disable-next-line
