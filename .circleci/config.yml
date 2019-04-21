@@ -10,6 +10,7 @@ jobs:
           command: |
             echo 'export BASE_URL="$BASE_URL"' >> $BASH_ENV
             echo 'export API_BASE_URL="$API_BASE_URL"' >> $BASH_ENV
+            echo 'export SENTRY_DSN="$SENTRY_DSN"' >> $BASH_ENV
       - restore_cache:
           keys:
           - dependencies-{{ checksum "package.json" }}
