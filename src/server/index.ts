@@ -26,6 +26,7 @@ app
     server.use(cors());
     server.use(bodyparser());
     server.get('*', handlers.Wildcard(app));
+    server.get('/sticker-request/:id', handlers.StickerRequest);
     server.post('/api/request-stickers', handlers.Api.RequestStickers);
 
     server.listen(port, (e: string) => {
