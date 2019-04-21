@@ -58,7 +58,13 @@
   "mail": {
     "stickers-requested": {
       "subject": "Sticker aangevraagd!",
-      "text": "Hey {{firstName}}\n\n\nJouw sticker werd gereserveerd op onderstaande gegevens.\n\n{{firstName}} {{lastName}}\n{{street}} {{bus}}\n{{postalCode}} {{city}}\n\nGelieve te bevestigen via onderstaande link.\n{{- url}}\n\n\nGroetjes\nGEEN ZEVER"
+      "text": "Hey {{- firstName}}\n\n\nJouw sticker werd gereserveerd op onderstaande gegevens.\n\n{{- firstName}} {{- lastName}}\n{{- street}} {{- bus}}\n{{- postalCode}} {{- city}}\n\nGelieve te bevestigen via onderstaande link.\n{{- url}}\n\n\nGroetjes\nGEEN ZEVER"
+    },
+    "admin": {
+      "stickers-requested": {
+        "subject": "Sticker aangevraagd door {{- firstName}} uit {{- city}}",
+        "text": "{{- firstName}} {{- lastName}}\n{{- email}}\n\n{{- street}} {{- bus}}\n{{- postalCode}} {{- city}}\n\n{{- note}}"
+      }
     }
   },
   "page": {

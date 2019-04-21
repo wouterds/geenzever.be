@@ -58,6 +58,21 @@ export default async (req: Request, res: Response): Promise<Response> => {
         url,
       }),
     );
+
+    await sendMail(
+      ['info@geenzever.be'],
+      t('mail.admin.stickers-requested.subject', {city, firstName }),
+      t('mail.admin.stickers-requested.text', {
+        firstName,
+        lastName,
+        email,
+        street,
+        bus,
+        postalCode,
+        city,
+        note,
+      }),
+    );
   } catch (e) {
     // tslint:disable-next-line
     console.error(e);
