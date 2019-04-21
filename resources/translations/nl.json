@@ -54,6 +54,24 @@
     "sticker-request-success": {
       "title": "Hoera, sticker is aangevraagd!",
       "text": "Je ontvangt nog een bevestigingsmailtje, eens bevestigd doe ik 'm zo snel mogelijk op de post!"
+    },
+    "sticker-request": {
+      "confirmed": {
+        "title": "Bevestigd",
+        "text": "Je aanvraag werd bevestigd."
+      },
+      "pending": {
+        "title": "Voorbereiding",
+        "text": "Zodra ik alles op voorraad heb zal verstuur ik je sticker!"
+      },
+      "rejected": {
+        "title": "Afgekeurd",
+        "text": "Je stickeraanvraag werd manueel afgekeurd."
+      },
+      "sent": {
+        "title": "Verzonden",
+        "text": "Je sticker werd op {{sentAt}} verzonden!"
+      }
     }
   },
   "mail": {

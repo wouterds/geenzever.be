@@ -14,6 +14,9 @@ interface MappedProps {
     postalCode: string;
     city: string;
     note: string;
+    emailConfirmedAt: Date | null;
+    rejectedAt: Date | null;
+    sentAt: Date | null;
   } | null;
 }
 
