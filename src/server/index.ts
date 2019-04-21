@@ -8,7 +8,7 @@ import sentry from 'services/sentry';
 import translation from 'services/translation';
 import handlers from './handlers';
 
-const port = 3001;
+const port = process.env.PORT || 3000;
 const config: { [key: string]: string | boolean } = {};
 
 if (process.env.NODE_ENV !== 'production') {
