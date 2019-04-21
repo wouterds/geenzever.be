@@ -2,7 +2,7 @@ version: '2'
 
 services:
   nginx:
-    image: docker.wouterdeschuyter.be/geenzever-website-nginx
+    image: docker.wouterdeschuyter.be/geenzever-nginx
     environment:
       - VIRTUAL_HOST=geenzever.be
       - LETSENCRYPT_HOST=geenzever.be
@@ -14,7 +14,7 @@ services:
     mem_limit: 8m
 
   node:
-    image: docker.wouterdeschuyter.be/geenzever-website-node
+    image: docker.wouterdeschuyter.be/geenzever-node
     env_file: .env
     mem_limit: 64m
     networks:
