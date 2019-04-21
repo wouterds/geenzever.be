@@ -24,6 +24,7 @@
     "bus-number": "Busnummer",
     "postal-code": "Postcode",
     "city": "Stad",
+    "note": "Note",
     "loading": "Laden.."
   },
   "placeholder": {
@@ -33,7 +34,8 @@
     "street-and-number": "Geef je straat + huisnummer in",
     "bus-number": "Geef je busnummer in",
     "postal-code": "Geef je postcode in",
-    "city": "Geef je stad in"
+    "city": "Geef je stad in",
+    "note": "Optioneel: als je nog iets te zeggen hebt kan dat hier!"
   },
   "feedback": {
     "bad-request": {

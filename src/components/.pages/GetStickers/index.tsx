@@ -19,6 +19,7 @@ interface Props {
     busNumber: string,
     postalCode: string,
     city: string,
+    note: string,
   ) => Promise<void>;
 }
 
@@ -31,6 +32,7 @@ const RequestStickers = (props: Props) => {
   const [busNumber, setBusNumber] = useState('');
   const [postalCode, setPostalCode] = useState('');
   const [city, setCity] = useState('');
+  const [note, setNote] = useState('');
   const { status, requestStickers } = props;
 
   useEffect(() => {
@@ -111,6 +113,7 @@ const RequestStickers = (props: Props) => {
                   busNumber,
                   postalCode,
                   city,
+                  note,
                 ).catch();
               }}
             >
@@ -191,6 +194,18 @@ const RequestStickers = (props: Props) => {
                     required
                     value={city}
                     onChange={(e: any) => setCity(e.target.value)}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={12} className="field">
+                  <label htmlFor="note">{t('label.note')}</label>
+                  <textarea
+                    id="note"
+                    placeholder={t('placeholder.note')}
+                    value={note}
+                    onChange={(e: any) => setNote(e.target.value)}
+                    rows={3}
                   />
                 </Col>
               </Row>

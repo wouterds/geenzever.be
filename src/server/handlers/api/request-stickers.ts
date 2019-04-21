@@ -19,6 +19,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
     busNumber,
     postalCode,
     city,
+    note,
   } = req.body;
 
   if (
@@ -42,9 +43,10 @@ export default async (req: Request, res: Response): Promise<Response> => {
       lastName,
       email,
       streetAndNumber,
-      busNumber,
+      busNumber: busNumber ? busNumber : null,
       postalCode,
       city,
+      note: note ? note : null,
     });
 
     const url = `${process.env.BASE_URL}/get-stickers/${stickerRequest.id}`;

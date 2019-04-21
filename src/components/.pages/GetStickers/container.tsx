@@ -13,6 +13,7 @@ interface MappedProps {
     busNumber: string,
     postalCode: string,
     city: string,
+    note: string,
   ) => Promise<void>;
 }
 
@@ -30,6 +31,7 @@ export default function withContainer<Props>(
       busNumber: string,
       postalCode: string,
       city: string,
+      note: string,
     ): Promise<void> => {
       setStatus('LOADING');
 
@@ -41,6 +43,7 @@ export default function withContainer<Props>(
         busNumber,
         postalCode,
         city,
+        note,
       };
 
       try {

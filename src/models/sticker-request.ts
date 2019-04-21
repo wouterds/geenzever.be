@@ -10,6 +10,7 @@ export interface Definition {
   busNumber?: string | null;
   postalCode: string;
   city: string;
+  note?: string | null;
   emailConfirmedAt?: Date | null;
   approvedAt?: Date | null;
   rejectedAt?: Date | null;
@@ -31,6 +32,7 @@ StickerRequest.init(
     busNumber: { type: DataTypes.STRING(8), allowNull: true },
     postalCode: { type: DataTypes.STRING(8), allowNull: false },
     city: { type: DataTypes.STRING(32), allowNull: false },
+    note: { type: DataTypes.TEXT, allowNull: true },
     emailConfirmedAt: { type: DataTypes.DATE, allowNull: true },
     approvedAt: { type: DataTypes.DATE, allowNull: true },
     rejectedAt: { type: DataTypes.DATE, allowNull: true },
