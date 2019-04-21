@@ -53,6 +53,12 @@
       "text": "Je ontvangt nog een bevestigingsmailtje, eens bevestigd doe ik 'm zo snel mogelijk op de post!"
     }
   },
+  "mail": {
+    "stickers-requested": {
+      "subject": "Sticker aangevraagd!",
+      "text": "Hey {{firstName}}\n\nJouw sticker is gereserveerd, gelieve te bevestigen via onderstaande link.\n{{- url}}\n\nDe groetjes\nGEEN ZEVER"
+    }
+  },
   "page": {
     "error": {
       "title": "Oh nee!",

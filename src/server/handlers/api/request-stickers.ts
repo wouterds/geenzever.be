@@ -6,6 +6,8 @@ import {
   NO_CONTENT,
 } from 'http-status';
 import StickerRequest from 'models/sticker-request';
+import { sendMail } from 'services/mail';
+import { t } from 'services/translation';
 import { isEmail } from 'validator';
 
 export default async (req: Request, res: Response): Promise<Response> => {
@@ -35,7 +37,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
   }
 
   try {
-    await StickerRequest.create({
+    const stickerRequest = await StickerRequest.create({
       firstName,
       lastName,
       email,
@@ -44,6 +46,14 @@ export default async (req: Request, res: Response): Promise<Response> => {
       postalCode,
       city,
     });
+
+    const url = `${process.env.BASE_URL}/get-stickers/${stickerRequest.id}`;
+
+    await sendMail(
+      [stickerRequest.email],
+      t('mail.stickers-requested.subject'),
+      t('mail.stickers-requested.text', { firstName, url }),
+    );
   } catch (e) {
     if (e.name === 'SequelizeUniqueConstraintError') {
       return res.sendStatus(CONFLICT);
