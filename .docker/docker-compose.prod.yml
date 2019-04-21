@@ -15,6 +15,7 @@ services:
 
   node:
     image: docker.wouterdeschuyter.be/geenzever-website-node
+    env_file: .env
     mem_limit: 64m
     networks:
       - default
