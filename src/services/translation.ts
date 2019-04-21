@@ -19,7 +19,10 @@ export const changeLanguage = (language: string) => {
   i18n.changeLanguage(language).catch();
 };
 
+export const t = (key: string, data: any = {}): string => i18n.t(key, data);
+
 export default {
   init,
   changeLanguage,
+  t,
 };
