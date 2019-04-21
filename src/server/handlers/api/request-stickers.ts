@@ -61,7 +61,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
 
     await sendMail(
       ['info@geenzever.be'],
-      t('mail.admin.stickers-requested.subject', {city, firstName }),
+      t('mail.admin.stickers-requested.subject', { city, firstName }),
       t('mail.admin.stickers-requested.text', {
         firstName,
         lastName,
