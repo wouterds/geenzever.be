@@ -1,3 +1,4 @@
+import withGA from 'next-ga';
 import NextApp, { Container } from 'next/app';
 import Router from 'next/router';
 import NProgress from 'nprogress';
@@ -69,4 +70,4 @@ Router.events.on('routeChangeStart', (_url: string) => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-export default App;
+export default withGA(process.env.GA_TRACKING_ID, Router)(App);
