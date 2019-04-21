@@ -9,6 +9,7 @@ jobs:
           name: Setup environment variables
           command: |
             echo 'export BASE_URL="$BASE_URL"' >> $BASH_ENV
+            echo 'export API_BASE_URL="$API_BASE_URL"' >> $BASH_ENV
       - restore_cache:
           keys:
           - dependencies-{{ checksum "package.json" }}

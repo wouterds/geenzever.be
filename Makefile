@@ -21,7 +21,7 @@ lint: node_modules
 	docker run --rm -v $(PWD):/code -w /code node:10-slim npm run lint
 
 .build-app: node_modules
-	docker run --rm -v $(PWD):/code -w /code --env=BASE_URL=$(BASE_URL) node:10-slim npm run build
+	docker run --rm -v $(PWD):/code -w /code --env=BASE_URL=$(BASE_URL) --env=API_BASE_URL=$(API_BASE_URL) node:10-slim npm run build
 	touch .build-app
 
 .build-nginx: $(DOCKERFILE_NGINX)
