@@ -25,10 +25,10 @@ app
 
     server.use(cors());
     server.use(bodyparser());
-    server.get('*', handlers.Wildcard(app));
     server.get('/sticker-request/:id', handlers.StickerRequest(app));
     server.post('/api/sticker-requests', handlers.Api.StickerRequests.Add);
     server.get('/api/sticker-requests/:id', handlers.Api.StickerRequests.Get);
+    server.get('*', handlers.Wildcard(app));
 
     server.listen(port, (e: string) => {
       if (e) {
