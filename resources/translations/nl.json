@@ -6,7 +6,7 @@
   "seo": {
     "site-name": "GEEN ZEVER",
     "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
-    "description": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingspamfletten ongewenst zijn."
+    "description": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingsdrukwerk ongewenst is."
   },
   "cta": {
     "request-sticker": "Vraag nu je <0>gratis</0> sticker aan!",
@@ -15,7 +15,8 @@
   },
   "nav": {
     "stickers": "Stickers",
-    "support": "Steunen"
+    "support": "Steunen",
+    "faq": "FAQ"
   },
   "label": {
     "first-name": "Voornaam",
@@ -93,7 +94,7 @@
     },
     "landing": {
       "title": "Hebt ge 't gehad met 't Vlaams Belang & N-VA underen zever?",
-      "text": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingspamfletten <0>ongewenst zijn</0>."
+      "text": "Awel, ik ook! Hang een sticker op je brievenbus en maak duidelijk dat hun verkiezingsdrukwerk <0>ongewenst is</0>."
     },
     "get-stickers": {
       "title": "Sticker aanvragen",
@@ -101,6 +102,43 @@
     },
     "sticker-request": {
       "title": "Sticker aanvraag"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "questions": {
+        "1": {
+          "question": "Hoe serieus is deze website?",
+          "answer": "Niet al te serieus."
+        },
+        "2": {
+          "question": "Helpt deze sticker echt tegen verkiezingsdrukwerk?",
+          "answer": "Helaas niet. Verkiezingsdrukwerk <0>moet</0> worden afgeleverd, willen of niet."
+        },
+        "3": {
+          "question": "Komen er nog andere (algemenere) stickers?",
+          "answer": "Wie weet."
+        },
+        "4": {
+          "question": "Waarom doe je dit?",
+          "answer": "Omdat ik al meer dan eens aan het koken van woede was na een reeks walgelijke uitspraken in de krant en op sociale media van onze goede vrienden bij N-VA & Vlaams Belang. Ik ben die bende zeveraars beu."
+        },
+        "5": {
+          "question": "Verdien je hier geld aan?",
+          "answer": "Neen, dit kost mij geld. Een <0>vrije bijdrage is altijd welkom</0>."
+        },
+        "6": {
+          "question": "Heeft deze website banden met een partij?",
+          "answer": "Neen."
+        },
+        "7": {
+          "question": "Ben je extreem links?",
+          "answer": "Neen, niet extreem links of rechts."
+        },
+        "8": {
+          "question": "Wie ben je?",
+          "answer": "Maakt het wat uit?"
+        }
+      }
     },
     "support": {
       "title": "Steunen",

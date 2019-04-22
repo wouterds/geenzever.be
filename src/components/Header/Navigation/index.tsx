@@ -41,6 +41,13 @@ const Navigation = (props: Props) => {
             </a>
           </Link>
         </li>
+        <li>
+          <Link href="/faq" prefetch>
+            <a className={pathname.indexOf('/faq') > -1 ? 'active' : undefined}>
+              {t('nav.faq')}
+            </a>
+          </Link>
+        </li>
       </ul>
     </Container>
   );
