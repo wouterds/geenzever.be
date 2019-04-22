@@ -49,7 +49,9 @@ const Navigation = (props: Props) => {
           </Link>
         </li>
         <li>
-          <a rel="nofollow" href="mailto:info@geenzever.be">{t('nav.contact')}</a>
+          <a rel="nofollow" href="mailto:info@geenzever.be">
+            {t('nav.contact')}
+          </a>
         </li>
       </ul>
     </Container>
