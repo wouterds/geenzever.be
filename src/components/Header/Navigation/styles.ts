@@ -91,7 +91,7 @@ export const Container = styled.div`
   }
 
   &:hover a.active {
-    color: #686de0;
+    color: #fff;
 
     ${breakpoint('sm')`
       color: #666;
