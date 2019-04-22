@@ -22,7 +22,7 @@ export const Container = styled.div`
       }
     }
 
-    ${breakpoint('sm')`
+    ${breakpoint('md')`
       display: block;
       position: relative;
       background: none;
@@ -66,7 +66,7 @@ export const Container = styled.div`
       }
     }
 
-    ${breakpoint('sm')`
+    ${breakpoint('md')`
       display: none;
     `}
   }
@@ -77,7 +77,7 @@ export const Container = styled.div`
     padding: 15px 25px;
     display: block;
 
-    ${breakpoint('sm')`
+    ${breakpoint('md')`
       padding: 5px;
       color: #666;
     `}
@@ -93,7 +93,7 @@ export const Container = styled.div`
   &:hover a.active {
     color: #fff;
 
-    ${breakpoint('sm')`
+    ${breakpoint('md')`
       color: #666;
     `}
 

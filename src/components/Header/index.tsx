@@ -10,14 +10,14 @@ const Header = () => {
   return (
     <Container fluid as="header">
       <Row>
-        <LogoWrapper xs={9} sm={8}>
+        <LogoWrapper xs={9} sm={8} md={6}>
           <Link prefetch href="/">
             <a>
               <h1>{t('website.title')}</h1>
             </a>
           </Link>
         </LogoWrapper>
-        <NavigationWrapper xs={3} sm={4}>
+        <NavigationWrapper xs={3} sm={4} md={6}>
           <Navigation />
         </NavigationWrapper>
       </Row>

@@ -10,13 +10,13 @@
   },
   "cta": {
     "request-sticker": "Vraag nu je <0>gratis</0> sticker aan!",
-    "send": "Verzenden!",
-    "contact": "contact"
+    "send": "Verzenden!"
   },
   "nav": {
     "stickers": "Stickers",
     "support": "Steunen",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "contact": "Contact"
   },
   "label": {
     "first-name": "Voornaam",

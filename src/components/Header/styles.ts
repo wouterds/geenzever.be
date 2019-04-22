@@ -55,7 +55,7 @@ export const NavigationWrapper = styled(Col)`
   margin-top: 5px;
   justify-content: flex-end;
 
-  ${breakpoint('sm')`
+  ${breakpoint('md')`
     margin-bottom: 15px;
     margin-top: 0;
   `}

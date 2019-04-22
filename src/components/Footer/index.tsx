@@ -9,11 +9,8 @@ const Footer = () => {
   return (
     <Container fluid as="footer">
       <Row>
-        <Col col={8}>
+        <Col col={12}>
           {t('website.copyright', { year: getYear(new Date()) })}
-        </Col>
-        <Col col={4} style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <a href="mailto:info@geenzever.be">{t('cta.contact')}</a>
         </Col>
       </Row>
     </Container>
