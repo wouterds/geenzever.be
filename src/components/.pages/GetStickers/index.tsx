@@ -64,14 +64,7 @@ const RequestStickers = (props: Props) => {
         {status !== 'SUCCESS' && (
           <>
             <h2>{t('page.get-stickers.title')}</h2>
-            <p>
-              {t('page.get-stickers.text-p1')}
-              <br />
-              <Trans
-                i18nKey="page.get-stickers.text-p2"
-                components={[<strong>text</strong>]}
-              />
-            </p>
+            <p>{t('page.get-stickers.text')}</p>
             {status === 'ERROR_BAD_REQUEST' && (
               <Message warning>
                 <Message.Header>
