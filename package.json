@@ -49,7 +49,7 @@
     "@types/node": "^11.13.7",
     "@types/nprogress": "0.0.29",
     "@types/qs": "^6.5.3",
-    "@types/react": "^16.8.13",
+    "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
     "@types/react-i18next": "^8.1.0",
     "@types/sparkpost": "^2.1.4",
