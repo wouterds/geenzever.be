@@ -50,7 +50,9 @@ const RequestStickers = (props: Props) => {
   return (
     <Layout>
       <Head>
-        <title>{t('page.get-stickers.title')}</title>
+        <title>
+          {t('page.get-stickers.title')} - {t('website.title')}
+        </title>
       </Head>
       <Container>
         {status === 'SUCCESS' && (

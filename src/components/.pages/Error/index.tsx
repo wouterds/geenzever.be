@@ -8,7 +8,9 @@ const Error = () => {
   return (
     <Layout>
       <Head>
-        <title>{t('page.error.title')}</title>
+        <title>
+          {t('page.error.title')} - {t('website.title')}
+        </title>
       </Head>
 
       <h2>{t('page.error.title')}</h2>

@@ -19,7 +19,9 @@ const FAQ = () => {
   return (
     <Layout>
       <Head>
-        <title>{t('page.faq.title')}</title>
+        <title>
+          {t('page.faq.title')} - {t('website.title')}
+        </title>
       </Head>
       <Container>
         <h2>{t('page.faq.title')}</h2>
