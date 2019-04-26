@@ -32,8 +32,13 @@ jobs:
       - run:
           name: Push images
           command: |
-            docker login $DOCKER_REGISTRY_HOST -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD
-            make push
+            if [ "$CIRCLE_BRANCH" == "master" ]; then
+              docker login $DOCKER_REGISTRY_HOST -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD
+              make push
+            fi
       - run:
           name: Deploy
-          command: make deploy
+          command:
+            if [ "$CIRCLE_BRANCH" == "master" ]; then
+               make deploy
+            fi
