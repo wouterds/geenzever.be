@@ -21,7 +21,7 @@ interface Props {
     note: string;
     emailConfirmedAt: Date | null;
     rejectedAt: Date | null;
-    sentAt: Date | null;
+    dispatchedAt: Date | null;
   } | null;
 }
 
@@ -57,7 +57,7 @@ const StickerRequest = (props: Props) => {
 
         {!justConfirmed &&
           !stickerRequest.rejectedAt &&
-          !stickerRequest.sentAt && (
+          !stickerRequest.dispatchedAt && (
             <Message warning>
               <Message.Header>
                 {t('feedback.sticker-request.pending.title')}
@@ -75,14 +75,14 @@ const StickerRequest = (props: Props) => {
           </Message>
         )}
 
-        {stickerRequest.sentAt && (
+        {stickerRequest.dispatchedAt && (
           <Message positive>
             <Message.Header>
               {t('feedback.sticker-request.sent.title')}
             </Message.Header>
             <p>
               {t('feedback.sticker-request.sent.text', {
-                sentAt: formatTime(stickerRequest.sentAt, 'dddd D MMMM YYYY', {
+                dispatchedAt: formatTime(stickerRequest.dispatchedAt, 'dddd D MMMM YYYY', {
                   locale: dateFnsLocale,
                 }),
               })}

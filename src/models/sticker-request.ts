@@ -13,7 +13,7 @@ export interface Definition {
   note?: string | null;
   emailConfirmedAt?: Date | null;
   rejectedAt?: Date | null;
-  sentAt?: Date | null;
+  dispatchedAt?: Date | null;
 }
 
 class StickerRequest extends Model {}
@@ -34,7 +34,7 @@ StickerRequest.init(
     note: { type: DataTypes.TEXT, allowNull: true },
     emailConfirmedAt: { type: DataTypes.DATE, allowNull: true },
     rejectedAt: { type: DataTypes.DATE, allowNull: true },
-    sentAt: { type: DataTypes.DATE, allowNull: true },
+    dispatchedAt: { type: DataTypes.DATE, allowNull: true },
   },
   {
     sequelize,
@@ -51,7 +51,7 @@ StickerRequest.init(
         fields: ['createdAt'],
       },
       {
-        fields: ['sentAt'],
+        fields: ['dispatchedAt'],
       },
     ],
   },

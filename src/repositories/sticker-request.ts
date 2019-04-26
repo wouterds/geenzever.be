@@ -11,7 +11,7 @@ export const add = async (data: {
   note?: string | null;
   emailConfirmedAt?: Date | null;
   rejectedAt?: Date | null;
-  sentAt?: Date | null;
+  dispatchedAt?: Date | null;
 }): Promise<Definition> => {
   const stickerRequest = await StickerRequest.create(data);
 
@@ -41,7 +41,7 @@ export const update = async (
     note?: string | null;
     emailConfirmedAt?: Date | null;
     rejectedAt?: Date | null;
-    sentAt?: Date | null;
+    dispatchedAt?: Date | null;
   },
 ): Promise<void> => {
   await StickerRequest.update(data, { where: { id } });

@@ -15,7 +15,7 @@ interface StickerRequest {
   note: string;
   emailConfirmedAt: Date | null;
   rejectedAt: Date | null;
-  sentAt: Date | null;
+  dispatchedAt: Date | null;
 }
 
 interface MappedProps {

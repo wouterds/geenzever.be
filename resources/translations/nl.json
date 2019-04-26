@@ -71,7 +71,7 @@
       },
       "sent": {
         "title": "Verzonden",
-        "text": "Je sticker werd op {{sentAt}} verzonden!"
+        "text": "Je sticker werd op {{dispatchedAt}} verzonden!"
       }
     }
   },
