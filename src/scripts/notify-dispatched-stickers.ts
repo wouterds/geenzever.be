@@ -38,4 +38,11 @@ import { t } from 'services/translation';
       sentry.captureException(e);
     }
   }
-})().catch(sentry.captureException);
+
+  process.exit(0);
+})().catch(e => {
+  sentry.captureException(e);
+  // tslint:disable-next-line
+  console.error(e);
+  process.exit(1);
+});
