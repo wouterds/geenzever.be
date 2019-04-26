@@ -20,9 +20,12 @@ services:
     networks:
       - default
       - database
+      - redis
 
 networks:
   webproxy:
     external: true
   database:
+    external: true
+  redis:
     external: true
