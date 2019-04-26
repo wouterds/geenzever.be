@@ -1,4 +1,6 @@
+import { subMinutes } from 'date-fns';
 import StickerRequest, { Definition } from 'models/sticker-request';
+import { Op } from 'sequelize';
 
 export const add = async (data: {
   firstName?: string;
@@ -28,6 +30,18 @@ export const getById = async (id: string): Promise<Definition | null> => {
   return null;
 };
 
+export const getRecentlyDispatched = async (): Promise<Definition[]> => {
+  const stickerRequests = await StickerRequest.findAll({
+    where: {
+      dispatchedAt: {
+        [Op.between]: [subMinutes(new Date(), 15), new Date()],
+      },
+    },
+  });
+
+  return stickerRequests.get({ plain: true });
+};
+
 export const update = async (
   id: string,
   data: {
@@ -50,5 +64,6 @@ export const update = async (
 export default {
   add,
   getById,
+  getRecentlyDispatched,
   update,
 };
