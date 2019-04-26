@@ -28,7 +28,7 @@ jobs:
           command: make lint
       - run:
           name: Build
-          command: cp -R ~/.ssh ./ssh && make build
+          command: make build
       - run:
           name: Push images
           command: |
