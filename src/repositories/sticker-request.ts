@@ -30,6 +30,20 @@ export const getById = async (id: string): Promise<Definition | null> => {
   return null;
 };
 
+export const getRecentlyAdded = async (): Promise<Definition[]> => {
+  const stickerRequests = await StickerRequest.findAll({
+    where: {
+      createdAt: {
+        [Op.between]: [subMinutes(new Date(), 15), new Date()],
+      },
+    },
+  });
+
+  return stickerRequests.map((stickerRequest: StickerRequest) =>
+    stickerRequest.get({ plain: true }),
+  );
+};
+
 export const getRecentlyDispatched = async (): Promise<Definition[]> => {
   const stickerRequests = await StickerRequest.findAll({
     where: {
@@ -66,6 +80,7 @@ export const update = async (
 export default {
   add,
   getById,
+  getRecentlyAdded,
   getRecentlyDispatched,
   update,
 };
