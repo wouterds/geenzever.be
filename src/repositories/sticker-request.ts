@@ -39,7 +39,9 @@ export const getRecentlyDispatched = async (): Promise<Definition[]> => {
     },
   });
 
-  return stickerRequests.get({ plain: true });
+  return stickerRequests.map((stickerRequest: StickerRequest) =>
+    stickerRequest.get({ plain: true }),
+  );
 };
 
 export const update = async (
