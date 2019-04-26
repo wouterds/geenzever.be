@@ -13,16 +13,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
       return res.sendStatus(NOT_FOUND);
     }
 
-    if (!stickerRequest.emailConfirmedAt) {
-      await StickerRequestRepository.update(id, {
-        emailConfirmedAt: new Date(),
-      });
-    }
-
-    return res.json({
-      ...stickerRequest,
-      emailConfirmedAt: new Date(),
-    });
+    return res.json(stickerRequest);
   } catch (e) {
     // tslint:disable-next-line
     console.error(e);
