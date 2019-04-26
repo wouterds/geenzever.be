@@ -28,7 +28,7 @@
     "qs": "^6.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-i18next": "^10.8.1",
+    "react-i18next": "^10.9.0",
     "reset-css": "^4.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.86.0",
