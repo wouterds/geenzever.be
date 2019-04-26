@@ -19,13 +19,13 @@ services:
     mem_limit: 128m
     networks:
       - default
-      - database
+      - mariadb
       - redis
 
 networks:
   webproxy:
     external: true
-  database:
+  mariadb:
     external: true
   redis:
     external: true
