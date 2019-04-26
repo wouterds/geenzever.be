@@ -6,9 +6,7 @@ import {
   NO_CONTENT,
 } from 'http-status';
 import StickerRequestRepository from 'repositories/sticker-request';
-import { sendMail } from 'services/mail';
 import sentry from 'services/sentry';
-import { t } from 'services/translation';
 import { isEmail } from 'validator';
 
 export default async (req: Request, res: Response): Promise<Response> => {
@@ -32,7 +30,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
   }
 
   try {
-    const stickerRequest = await StickerRequestRepository.add({
+    await StickerRequestRepository.add({
       firstName,
       lastName,
       email,
@@ -42,37 +40,6 @@ export default async (req: Request, res: Response): Promise<Response> => {
       city,
       note: note ? note : null,
     });
-
-    const url = `${process.env.BASE_URL}/sticker-request/${stickerRequest.id}`;
-
-    await sendMail(
-      [stickerRequest.email],
-      t('mail.stickers-requested.subject'),
-      t('mail.stickers-requested.text', {
-        firstName,
-        lastName,
-        street,
-        bus,
-        postalCode,
-        city,
-        url,
-      }),
-    );
-
-    await sendMail(
-      ['info@geenzever.be'],
-      t('mail.admin.stickers-requested.subject', { city, firstName }),
-      t('mail.admin.stickers-requested.text', {
-        firstName,
-        lastName,
-        email,
-        street,
-        bus,
-        postalCode,
-        city,
-        note,
-      }),
-    );
   } catch (e) {
     // tslint:disable-next-line
     console.error(e);
