@@ -38,7 +38,7 @@ jobs:
             fi
       - run:
           name: Deploy
-          command:
+          command: |
             if [ "$CIRCLE_BRANCH" == "master" ]; then
                make deploy
             fi
