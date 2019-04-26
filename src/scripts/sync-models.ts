@@ -1,5 +1,3 @@
-// tslint:disable-next-line
-require('dotenv').config();
 import { readdirSync } from 'fs';
 import { resolve } from 'path';
 import db from 'services/database';

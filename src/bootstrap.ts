@@ -1,3 +1,5 @@
+// tslint:disable-next-line
+require('dotenv').config();
 import { register } from 'tsconfig-paths';
 import tsConfig from '../tsconfig.json';
 
