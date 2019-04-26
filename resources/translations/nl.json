@@ -80,6 +80,10 @@
       "subject": "Sticker aangevraagd!",
       "text": "Hey {{- firstName}}\n\n\nJouw sticker werd gereserveerd op onderstaande gegevens.\n\n{{- firstName}} {{- lastName}}\n{{- street}} {{- bus}}\n{{- postalCode}} {{- city}}\n\nGelieve te bevestigen via onderstaande link.\n{{- url}}\n\n\nGroetjes\nGEEN ZEVER"
     },
+    "stickers-dispatched": {
+      "subject": "Sticker verzonden!",
+      "text": "Hey {{- firstName}}\n\n\nJouw sticker is onderweg naar onderstaand adres.\n\n{{- firstName}} {{- lastName}}\n{{- street}} {{- bus}}\n{{- postalCode}} {{- city}}\n\nIk hou alvast sociale media in de gaten op #geenzever ;-)...\n\n\nGroetjes\nGEEN ZEVER"
+    },
     "admin": {
       "stickers-requested": {
         "subject": "Sticker aangevraagd door {{- firstName}} uit {{- city}}",

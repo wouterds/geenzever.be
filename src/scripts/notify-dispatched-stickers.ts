@@ -1,6 +1,8 @@
 import StickerRequestRepository from 'repositories/sticker-request';
 import cache, { CacheKey } from 'services/cache';
+import { sendMail } from 'services/mail';
 import sentry from 'services/sentry';
+import { t } from 'services/translation';
 
 (async () => {
   const stickerRequests = await StickerRequestRepository.getRecentlyDispatched();
@@ -14,11 +16,26 @@ import sentry from 'services/sentry';
       continue;
     }
 
-    // todo: sent mail
+    try {
+      await sendMail(
+        [stickerRequest.email],
+        t('mail.stickers-dispatched.subject'),
+        t('mail.stickers-dispatched.text', {
+          firstName: stickerRequest.firstName,
+          lastName: stickerRequest.lastName,
+          street: stickerRequest.street,
+          bus: stickerRequest.bus,
+          postalCode: stickerRequest.postalCode,
+          city: stickerRequest.city,
+        }),
+      );
 
-    await cache.store(
-      CacheKey.NotifiedDispatched,
-      JSON.stringify([...notifiedDispatched, stickerRequest.id]),
-    );
+      await cache.store(
+        CacheKey.NotifiedDispatched,
+        JSON.stringify([...notifiedDispatched, stickerRequest.id]),
+      );
+    } catch (e) {
+      sentry.captureException(e);
+    }
   }
 })().catch(sentry.captureException);
