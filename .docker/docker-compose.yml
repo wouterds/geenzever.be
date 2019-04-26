@@ -10,6 +10,11 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
 
+  redis:
+    image: redis:5-alpine
+    volumes:
+      - ./data/redis/:/data
+
   node:
     image: node:10-slim
     command: ["./node_modules/.bin/ts-node", "-r", "./src/bootstrap", "./src/server"]
