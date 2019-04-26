@@ -5,7 +5,7 @@ import {
   INTERNAL_SERVER_ERROR,
   NO_CONTENT,
 } from 'http-status';
-import StickerRequest from 'models/sticker-request';
+import StickerRequestRepository from 'repositories/sticker-request';
 import { sendMail } from 'services/mail';
 import sentry from 'services/sentry';
 import { t } from 'services/translation';
@@ -32,7 +32,7 @@ export default async (req: Request, res: Response): Promise<Response> => {
   }
 
   try {
-    const stickerRequest = await StickerRequest.create({
+    const stickerRequest = await StickerRequestRepository.add({
       firstName,
       lastName,
       email,
