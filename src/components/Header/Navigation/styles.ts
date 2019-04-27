@@ -20,6 +20,10 @@ export const Container = styled.div`
     margin-top: 10px;
   }
 
+  &.is-open .menu {
+    display: block;
+  }
+
   ${breakpoint('sm')`
     display: block;
     margin-top: -5px;

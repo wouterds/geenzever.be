@@ -11,10 +11,19 @@ interface Props {
 const Navigation = (props: Props) => {
   const { t } = useTranslation();
   const { pathname } = props.router;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Container className="dropdown">
-      <a href="#" className="dropdown-toggle">
+    <Container className={`dropdown ${isOpen && 'is-open'}`}>
+      <a
+        href="#"
+        className="dropdown-toggle"
+        onClick={(e: any) => {
+          e.preventDefault();
+
+          setIsOpen(!isOpen);
+        }}
+      >
         <i className="icon icon-menu" />
       </a>
       <ul className="menu">
