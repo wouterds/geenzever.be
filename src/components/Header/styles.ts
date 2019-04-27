@@ -1,7 +1,6 @@
-import { Col, Container as BootstrapContainer } from 'styled-bootstrap-grid';
 import { breakpoint, styled } from 'styles';
 
-export const Container = styled(BootstrapContainer)`
+export const Container = styled.header`
   line-height: 1;
   padding: 25px 25px 15px;
 
@@ -10,7 +9,7 @@ export const Container = styled(BootstrapContainer)`
   `}
 `;
 
-export const LogoWrapper = styled(Col)`
+export const LogoWrapper = styled.div`
   h1 {
     font-weight: 900;
     text-transform: uppercase;
@@ -27,7 +26,7 @@ export const LogoWrapper = styled(Col)`
   }
 `;
 
-export const NavigationWrapper = styled(Col)`
+export const NavigationWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 5px;

@@ -4,6 +4,10 @@ import { breakpoint, breakpoints } from 'styles';
 export const Container = styled.div`
   max-width: ${breakpoints.md}px;
 
+  .form-group {
+    margin-bottom: 0.4rem;
+  }
+
   p br {
     content: ' ';
     width: 4px;

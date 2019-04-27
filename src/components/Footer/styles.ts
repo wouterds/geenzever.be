@@ -1,7 +1,6 @@
-import { Container as BootstrapContainer } from 'styled-bootstrap-grid';
 import { breakpoint, styled } from 'styles';
 
-export const Container = styled(BootstrapContainer)`
+export const Container = styled.footer`
   line-height: 1;
   padding: 30px 25px 20px;
   display: flex;

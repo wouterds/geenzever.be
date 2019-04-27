@@ -76,7 +76,7 @@ export const Container = styled.div`
     &:focus,
     &.active,
     &:hover {
-      color: #5655D5;
+      color: #5655d5;
     }
   }
 
@@ -88,7 +88,7 @@ export const Container = styled.div`
     `}
 
     &:hover {
-      color: #5655D5;
+      color: #5655d5;
     }
   }
 `;

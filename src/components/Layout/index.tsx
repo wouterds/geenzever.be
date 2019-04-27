@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BaseCSS } from 'styled-bootstrap-grid';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles';
 import 'styles/base.css';
@@ -40,13 +39,11 @@ const Layout = (props: Props) => {
         <meta name="twitter:image" content={seoImage} />
       </Head>
 
-      <BaseCSS />
-
       <ThemeProvider theme={theme}>
         <Container>
           <Header />
 
-          <Main fluid role="main" as="section">
+          <Main className="container" role="main">
             {children}
           </Main>
 

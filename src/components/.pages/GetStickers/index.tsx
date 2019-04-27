@@ -2,7 +2,6 @@ import Layout from 'components/Layout';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Col, Row } from 'styled-bootstrap-grid';
 import withContainer from './container';
 import { Container } from './styles';
 
@@ -99,8 +98,8 @@ const RequestStickers = (props: Props) => {
                 ).catch();
               }}
             >
-              <Row>
-                <Col sm={6} className="form-group">
+              <div className="columns">
+                <div className="form-group column col-6 col-xs-12">
                   <label className="form-label" htmlFor="firstName">
                     {t('label.first-name')} *
                   </label>
@@ -112,8 +111,8 @@ const RequestStickers = (props: Props) => {
                     value={firstName}
                     onChange={(e: any) => setFirstName(e.target.value)}
                   />
-                </Col>
-                <Col sm={6} className="form-group">
+                </div>
+                <div className="form-group column col-6 col-xs-12">
                   <label className="form-label" htmlFor="lastName">
                     {t('label.last-name')} *
                   </label>
@@ -125,10 +124,10 @@ const RequestStickers = (props: Props) => {
                     value={lastName}
                     onChange={(e: any) => setLastName(e.target.value)}
                   />
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={12} className="form-group">
+                </div>
+              </div>
+              <div className="columns">
+                <div className="form-group column col-12">
                   <label className="form-label" htmlFor="email">
                     {t('label.email')} *
                   </label>
@@ -141,10 +140,10 @@ const RequestStickers = (props: Props) => {
                     value={email}
                     onChange={(e: any) => setEmail(e.target.value)}
                   />
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={8} className="form-group">
+                </div>
+              </div>
+              <div className="columns">
+                <div className="form-group column col-8 col-xs-12">
                   <label className="form-label" htmlFor="street">
                     {t('label.street')} *
                   </label>
@@ -156,8 +155,8 @@ const RequestStickers = (props: Props) => {
                     value={street}
                     onChange={(e: any) => setStreet(e.target.value)}
                   />
-                </Col>
-                <Col sm={4} className="form-group">
+                </div>
+                <div className="form-group column col-4 col-xs-12">
                   <label className="form-label" htmlFor="bus">
                     {t('label.bus')}
                   </label>
@@ -168,10 +167,10 @@ const RequestStickers = (props: Props) => {
                     value={bus}
                     onChange={(e: any) => setBus(e.target.value)}
                   />
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={6} className="form-group">
+                </div>
+              </div>
+              <div className="columns">
+                <div className="form-group column col-6 col-xs-12">
                   <label className="form-label" htmlFor="postalCode">
                     {t('label.postal-code')} *
                   </label>
@@ -183,8 +182,8 @@ const RequestStickers = (props: Props) => {
                     value={postalCode}
                     onChange={(e: any) => setPostalCode(e.target.value)}
                   />
-                </Col>
-                <Col sm={6} className="form-group">
+                </div>
+                <div className="form-group column col-6 col-xs-12">
                   <label className="form-label" htmlFor="city">
                     {t('label.city')} *
                   </label>
@@ -196,10 +195,10 @@ const RequestStickers = (props: Props) => {
                     value={city}
                     onChange={(e: any) => setCity(e.target.value)}
                   />
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={12} className="form-group">
+                </div>
+              </div>
+              <div className="columns">
+                <div className="form-group column col-12">
                   <label className="form-label" htmlFor="note">
                     {t('label.note')}
                   </label>
@@ -211,8 +210,8 @@ const RequestStickers = (props: Props) => {
                     onChange={(e: any) => setNote(e.target.value)}
                     rows={3}
                   />
-                </Col>
-              </Row>
+                </div>
+              </div>
 
               <button
                 type="submit"

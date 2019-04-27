@@ -1,4 +1,3 @@
-import { Container as BootstrapContainer } from 'styled-bootstrap-grid';
 import { breakpoint, styled } from 'styles';
 
 export const Container = styled.div`
@@ -9,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const Main = styled(BootstrapContainer)`
+export const Main = styled.section`
   display: flex;
   padding: 0 25px;
   flex-direction: column;
