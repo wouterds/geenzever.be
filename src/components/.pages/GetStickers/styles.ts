@@ -8,15 +8,23 @@ export const Container = styled.div`
     margin-bottom: 0.4rem;
   }
 
-  p br {
-    content: ' ';
-    width: 4px;
-    display: inline-block;
+  form {
+    margin-top: 0.4rem;
+  }
 
-    ${breakpoint('md')`
-      display: block;
-      width: auto;
-      content: none;
-    `}
+  p {
+    margin-bottom: 0.4rem;
+
+    br {
+      content: ' ';
+      width: 4px;
+      display: inline-block;
+
+      ${breakpoint('md')`
+        display: block;
+        width: auto;
+        content: none;
+      `}
+    }
   }
 `;
