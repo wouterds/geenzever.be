@@ -1,7 +1,6 @@
 import { breakpoint, styled } from 'styles';
 
 export const Container = styled.header`
-  line-height: 1;
   padding: 25px 25px 15px;
 
   ${breakpoint('sm')`
@@ -14,6 +13,18 @@ export const LogoWrapper = styled.div`
     font-weight: 900;
     text-transform: uppercase;
     margin: 0;
+
+    @media (max-width: 375px) {
+      font-size: 1.9rem;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 340px) {
+      font-size: 1.6rem;
+    }
   }
 
   a {
@@ -29,11 +40,6 @@ export const LogoWrapper = styled.div`
 export const NavigationWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 5px;
   justify-content: flex-end;
-
-  ${breakpoint('md')`
-    margin-bottom: 15px;
-    margin-top: 0;
-  `}
+  margin-top: -3px;
 `;

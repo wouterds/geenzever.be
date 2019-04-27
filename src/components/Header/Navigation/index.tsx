@@ -11,15 +11,14 @@ interface Props {
 const Navigation = (props: Props) => {
   const { t } = useTranslation();
   const { pathname } = props.router;
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Container>
-      <button onClick={() => setIsOpen(!isOpen)}>
-        <img src={require('@resources/images/menu.svg')} />
-      </button>
-      <ul className={isOpen ? 'open' : undefined}>
-        <li>
+    <Container className="dropdown">
+      <a href="#" className="dropdown-toggle">
+        <i className="icon icon-menu" />
+      </a>
+      <ul className="menu">
+        <li className="menu-item">
           <Link href="/get-stickers" prefetch>
             <a
               className={
@@ -30,7 +29,7 @@ const Navigation = (props: Props) => {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="menu-item">
           <Link href="/support" prefetch>
             <a
               className={
@@ -41,14 +40,14 @@ const Navigation = (props: Props) => {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="menu-item">
           <Link href="/faq" prefetch>
             <a className={pathname.indexOf('/faq') > -1 ? 'active' : undefined}>
               {t('nav.faq')}
             </a>
           </Link>
         </li>
-        <li>
+        <li className="menu-item">
           <a rel="nofollow" href="mailto:info@geenzever.be">
             {t('nav.contact')}
           </a>

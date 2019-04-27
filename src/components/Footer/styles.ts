@@ -1,7 +1,6 @@
 import { breakpoint, styled } from 'styles';
 
 export const Container = styled.footer`
-  line-height: 1;
   padding: 30px 25px 20px;
   display: flex;
   flex-direction: column;

@@ -8,11 +8,11 @@ export const css = styledComponentsCss;
 export const breakpoint = styledComponentsBreakpoint;
 
 export const breakpoints = {
-  xs: 0,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
+  xs: 480,
+  sm: 600,
+  md: 840,
+  lg: 960,
+  xl: 1280,
 };
 
 export const theme = {

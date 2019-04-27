@@ -1,4 +1,5 @@
 @import '~spectre.css/dist/spectre.min.css';
+@import '~spectre.css/dist/spectre-icons.min.css';
 
 html,
 body,
@@ -10,14 +11,13 @@ body,
 body {
   background: #fff;
   color: #000;
-  font-family: "Public Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
 }
 
+body,
 input,
-button,
-textarea {
+textarea,
+button {
+  font-family: "Public Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-weight: 300;
 }
 
