@@ -9,11 +9,12 @@ export const Question = styled.div`
   margin-top: 25px;
 
   em {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.2em;
+    font-style: normal;
   }
 
-  p + p {
-    margin-top: 5px;
+  p:first-child {
+    margin-bottom: 0.4em;
   }
 `;

@@ -8,7 +8,7 @@ export const Container = styled.div`
     display: inline-block;
     padding: 8px 12px;
     line-height: 1;
-    color: #66758c;
+    color: inherit;
   }
 
   .menu {
