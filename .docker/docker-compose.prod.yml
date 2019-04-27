@@ -16,7 +16,7 @@ services:
   node:
     image: docker.wouterdeschuyter.be/geenzever-node
     env_file: .env
-    mem_limit: 128m
+    mem_limit: 256m
     networks:
       - default
       - mariadb
