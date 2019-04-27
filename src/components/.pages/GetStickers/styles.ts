@@ -9,7 +9,7 @@ export const Container = styled.div`
   }
 
   form {
-    margin-top: 0.4rem;
+    padding-top: 0.4rem;
   }
 
   p {
