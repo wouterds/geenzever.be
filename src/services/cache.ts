@@ -10,8 +10,8 @@ const setAsync = promisify(client.set).bind(client);
 const getAsync = promisify(client.get).bind(client);
 
 export enum CacheKey {
-  NotifiedRequested = 'NotifiedRequested',
-  NotifiedDispatched = 'NotifiedDispatched',
+  NotifiedRequested = 'notified-requested',
+  NotifiedDispatched = 'notified-dispatched',
 }
 
 export const store = async (key: string, value: string) => {
