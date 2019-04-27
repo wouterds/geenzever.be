@@ -3,7 +3,6 @@ import { differenceInSeconds, format as formatTime } from 'date-fns';
 import dateFnsLocale from 'date-fns/locale/nl';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import { Message } from 'semantic-ui-react';
 import Error from '../Error';
 import withContainer from './container';
 import { Container } from './styles';
@@ -47,47 +46,37 @@ const StickerRequest = (props: Props) => {
         <h2>{t('page.sticker-request.title')}</h2>
 
         {justConfirmed && (
-          <Message positive>
-            <Message.Header>
-              {t('feedback.sticker-request.confirmed.title')}
-            </Message.Header>
-            <p>{t('feedback.sticker-request.confirmed.text')}</p>
-          </Message>
+          <div className="toast toast-success">
+            {t('feedback.sticker-request.confirmed')}
+          </div>
         )}
 
         {!justConfirmed &&
           !stickerRequest.rejectedAt &&
           !stickerRequest.dispatchedAt && (
-            <Message warning>
-              <Message.Header>
-                {t('feedback.sticker-request.pending.title')}
-              </Message.Header>
-              <p>{t('feedback.sticker-request.pending.text')}</p>
-            </Message>
+            <div className="toast toast-warning">
+              {t('feedback.sticker-request.pending')}
+            </div>
           )}
 
         {stickerRequest.rejectedAt && (
-          <Message negative>
-            <Message.Header>
-              {t('feedback.sticker-request.rejected.title')}
-            </Message.Header>
-            <p>{t('feedback.sticker-request.rejected.text')}</p>
-          </Message>
+          <div className="toast toast-error">
+            {t('feedback.sticker-request.rejected')}
+          </div>
         )}
 
         {stickerRequest.dispatchedAt && (
-          <Message positive>
-            <Message.Header>
-              {t('feedback.sticker-request.sent.title')}
-            </Message.Header>
-            <p>
-              {t('feedback.sticker-request.sent.text', {
-                dispatchedAt: formatTime(stickerRequest.dispatchedAt, 'dddd D MMMM YYYY', {
+          <div className="toast toast-success">
+            {t('feedback.sticker-request.sent', {
+              dispatchedAt: formatTime(
+                stickerRequest.dispatchedAt,
+                'dddd D MMMM YYYY',
+                {
                   locale: dateFnsLocale,
-                }),
-              })}
-            </p>
-          </Message>
+                },
+              ),
+            })}
+          </div>
         )}
       </Container>
     </Layout>

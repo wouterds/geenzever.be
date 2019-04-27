@@ -40,39 +40,15 @@
     "note": "Optioneel: als je nog iets anders te zeggen hebt dan kan dat hier!"
   },
   "feedback": {
-    "bad-request": {
-      "title": "Probleem",
-      "text": "Controleer of alle velden correct zijn ingevuld."
-    },
-    "already-requested": {
-      "title": "Aanvraag geweigerd",
-      "text": "Het ziet er naar uit dat je al een sticker hebt aangevraagd."
-    },
-    "generic-error": {
-      "title": "Fout opgetreden",
-      "text": "Er ging iets mis, probeer het later opnieuw."
-    },
-    "sticker-request-success": {
-      "title": "Hoera, sticker is aangevraagd!",
-      "text": "Je ontvangt nog een bevestigingsmailtje, eens bevestigd doe ik 'm zo snel mogelijk op de post!"
-    },
+    "bad-request": "Controleer of alle velden correct zijn ingevuld.",
+    "already-requested": "Het ziet er naar uit dat je al een sticker hebt aangevraagd.",
+    "generic-error": "Er ging iets mis, probeer het later opnieuw.",
+    "sticker-request-success": "Hoera, sticker aangevraagd! Je krijgt binnen enkele minuten nog een mailtje, juist nog even bevestigen.",
     "sticker-request": {
-      "confirmed": {
-        "title": "Bevestigd",
-        "text": "Bedankt, je aanvraag werd bevestigd!"
-      },
-      "pending": {
-        "title": "Voorbereiding",
-        "text": "Je stickeraanvraag werd reeds bevestigd, ik verstuur je sticker zo snel mogelijk!"
-      },
-      "rejected": {
-        "title": "Afgekeurd",
-        "text": "Je stickeraanvraag werd manueel afgekeurd."
-      },
-      "sent": {
-        "title": "Verzonden",
-        "text": "Je sticker werd op {{dispatchedAt}} verzonden!"
-      }
+      "confirmed": "Bedankt, je aanvraag werd bevestigd!",
+      "pending": "Je stickeraanvraag werd reeds bevestigd, ik verstuur je sticker zo snel mogelijk!",
+      "rejected": "Je stickeraanvraag werd afgekeurd.",
+      "sent": "Je sticker werd op {{dispatchedAt}} verzonden!"
     }
   },
   "mail": {

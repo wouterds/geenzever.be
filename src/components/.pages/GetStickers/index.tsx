@@ -1,10 +1,8 @@
 import Layout from 'components/Layout';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import { Trans, useTranslation } from 'react-i18next';
-import { Form, Message } from 'semantic-ui-react';
+import { useTranslation } from 'react-i18next';
 import { Col, Row } from 'styled-bootstrap-grid';
-import { Button } from 'styles/button';
 import withContainer from './container';
 import { Container } from './styles';
 
@@ -56,43 +54,32 @@ const RequestStickers = (props: Props) => {
       </Head>
       <Container>
         {status === 'SUCCESS' && (
-          <Message positive>
-            <Message.Header>
-              {t('feedback.sticker-request-success.title')}
-            </Message.Header>
-            <p>{t('feedback.sticker-request-success.text')}</p>
-          </Message>
+          <div className="toast toast-success">
+            {t('feedback.sticker-request-success')}
+          </div>
         )}
         {status !== 'SUCCESS' && (
           <>
             <h2>{t('page.get-stickers.title')}</h2>
             <p>{t('page.get-stickers.text')}</p>
+
             {status === 'ERROR_BAD_REQUEST' && (
-              <Message warning>
-                <Message.Header>
-                  {t('feedback.bad-request.title')}
-                </Message.Header>
-                <p>{t('feedback.bad-request.text')}</p>
-              </Message>
+              <div className="toast toast-warning">
+                {t('feedback.bad-request')}
+              </div>
             )}
             {status === 'ERROR_DUPLICATE' && (
-              <Message negative>
-                <Message.Header>
-                  {t('feedback.already-requested.title')}
-                </Message.Header>
-                <p>{t('feedback.already-requested.text')}</p>
-              </Message>
+              <div className="toast toast-error">
+                {t('feedback.already-requested')}
+              </div>
             )}
             {status === 'ERROR' && (
-              <Message negative>
-                <Message.Header>
-                  {t('feedback.generic-error.title')}
-                </Message.Header>
-                <p>{t('feedback.generic-error.text')}</p>
-              </Message>
+              <div className="toast toast-error">
+                {t('feedback.generic-error')}
+              </div>
             )}
 
-            <Form
+            <form
               onSubmit={(e: any) => {
                 e.preventDefault();
 
@@ -113,9 +100,12 @@ const RequestStickers = (props: Props) => {
               }}
             >
               <Row>
-                <Col sm={6} className="field">
-                  <label htmlFor="firstName">{t('label.first-name')} *</label>
+                <Col sm={6} className="form-group">
+                  <label className="form-label" htmlFor="firstName">
+                    {t('label.first-name')} *
+                  </label>
                   <input
+                    className="form-input"
                     id="firstName"
                     placeholder={t('placeholder.first-name')}
                     required
@@ -123,9 +113,12 @@ const RequestStickers = (props: Props) => {
                     onChange={(e: any) => setFirstName(e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="field">
-                  <label htmlFor="lastName">{t('label.last-name')} *</label>
+                <Col sm={6} className="form-group">
+                  <label className="form-label" htmlFor="lastName">
+                    {t('label.last-name')} *
+                  </label>
                   <input
+                    className="form-input"
                     id="lastName"
                     placeholder={t('placeholder.last-name')}
                     required
@@ -135,9 +128,12 @@ const RequestStickers = (props: Props) => {
                 </Col>
               </Row>
               <Row>
-                <Col sm={12} className="field">
-                  <label htmlFor="email">{t('label.email')} *</label>
+                <Col sm={12} className="form-group">
+                  <label className="form-label" htmlFor="email">
+                    {t('label.email')} *
+                  </label>
                   <input
+                    className="form-input"
                     id="email"
                     type="email"
                     placeholder={t('placeholder.email')}
@@ -148,9 +144,12 @@ const RequestStickers = (props: Props) => {
                 </Col>
               </Row>
               <Row>
-                <Col sm={8} className="field">
-                  <label htmlFor="street">{t('label.street')} *</label>
+                <Col sm={8} className="form-group">
+                  <label className="form-label" htmlFor="street">
+                    {t('label.street')} *
+                  </label>
                   <input
+                    className="form-input"
                     id="street"
                     placeholder={t('placeholder.street')}
                     required
@@ -158,9 +157,12 @@ const RequestStickers = (props: Props) => {
                     onChange={(e: any) => setStreet(e.target.value)}
                   />
                 </Col>
-                <Col sm={4} className="field">
-                  <label htmlFor="bus">{t('label.bus')}</label>
+                <Col sm={4} className="form-group">
+                  <label className="form-label" htmlFor="bus">
+                    {t('label.bus')}
+                  </label>
                   <input
+                    className="form-input"
                     id="bus"
                     placeholder={t('placeholder.bus')}
                     value={bus}
@@ -169,9 +171,12 @@ const RequestStickers = (props: Props) => {
                 </Col>
               </Row>
               <Row>
-                <Col sm={6} className="field">
-                  <label htmlFor="postalCode">{t('label.postal-code')} *</label>
+                <Col sm={6} className="form-group">
+                  <label className="form-label" htmlFor="postalCode">
+                    {t('label.postal-code')} *
+                  </label>
                   <input
+                    className="form-input"
                     id="postalCode"
                     placeholder={t('placeholder.postal-code')}
                     required
@@ -179,9 +184,12 @@ const RequestStickers = (props: Props) => {
                     onChange={(e: any) => setPostalCode(e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="field">
-                  <label htmlFor="city">{t('label.city')} *</label>
+                <Col sm={6} className="form-group">
+                  <label className="form-label" htmlFor="city">
+                    {t('label.city')} *
+                  </label>
                   <input
+                    className="form-input"
                     id="city"
                     placeholder={t('placeholder.city')}
                     required
@@ -191,9 +199,12 @@ const RequestStickers = (props: Props) => {
                 </Col>
               </Row>
               <Row>
-                <Col sm={12} className="field">
-                  <label htmlFor="note">{t('label.note')}</label>
+                <Col sm={12} className="form-group">
+                  <label className="form-label" htmlFor="note">
+                    {t('label.note')}
+                  </label>
                   <textarea
+                    className="form-input"
                     id="note"
                     placeholder={t('placeholder.note')}
                     value={note}
@@ -203,15 +214,16 @@ const RequestStickers = (props: Props) => {
                 </Col>
               </Row>
 
-              <Button
+              <button
                 type="submit"
                 style={{ marginTop: 10 }}
                 disabled={status === 'LOADING'}
+                className="btn btn-primary"
               >
                 {status === 'LOADING' && t('label.loading')}
                 {status !== 'LOADING' && t('cta.send')}
-              </Button>
-            </Form>
+              </button>
+            </form>
           </>
         )}
       </Container>

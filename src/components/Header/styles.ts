@@ -2,7 +2,6 @@ import { Col, Container as BootstrapContainer } from 'styled-bootstrap-grid';
 import { breakpoint, styled } from 'styles';
 
 export const Container = styled(BootstrapContainer)`
-  font-size: 1rem;
   line-height: 1;
   padding: 25px 25px 15px;
 
@@ -16,27 +15,6 @@ export const LogoWrapper = styled(Col)`
     font-weight: 900;
     text-transform: uppercase;
     margin: 0;
-    font-size: 3rem;
-
-    @media (max-width: 480px) {
-      font-size: 2.5rem;
-    }
-
-    @media (max-width: 415px) {
-      font-size: 2.2rem;
-    }
-
-    @media (max-width: 367px) {
-      font-size: 2.1rem;
-    }
-
-    @media (max-width: 355px) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 345px) {
-      font-size: 1.84rem;
-    }
   }
 
   a {

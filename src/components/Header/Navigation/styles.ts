@@ -9,18 +9,7 @@ export const Container = styled.div`
     background: #000;
     border-radius: 5px;
     z-index: 1;
-
-    @media (max-width: 340px) {
-      top: 38px;
-    }
-
-    @media (max-width: 360px) {
-      top: 40px;
-    }
-
-    @media (max-width: 430px) {
-      top: 44px;
-    }
+    margin: 0;
 
     &.open {
       display: inline-block;
@@ -65,22 +54,6 @@ export const Container = styled.div`
 
     img {
       height: 36px;
-
-      @media (max-width: 475px) {
-        height: 32px;
-      }
-
-      @media (max-width: 400px) {
-        height: 30px;
-      }
-
-      @media (max-width: 360px) {
-        height: 28px;
-      }
-
-      @media (max-width: 340px) {
-        height: 26px;
-      }
     }
 
     ${breakpoint('md')`
@@ -103,7 +76,7 @@ export const Container = styled.div`
     &:focus,
     &.active,
     &:hover {
-      color: #686de0;
+      color: #5655D5;
     }
   }
 
@@ -115,7 +88,7 @@ export const Container = styled.div`
     `}
 
     &:hover {
-      color: #686de0;
+      color: #5655D5;
     }
   }
 `;

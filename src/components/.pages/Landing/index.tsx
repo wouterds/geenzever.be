@@ -21,12 +21,12 @@ const Landing = () => {
 
       <p>
         <Link href="/get-stickers" prefetch passHref>
-          <AnchorButton>
+          <a className="btn btn-primary">
             <Trans
               i18nKey="cta.request-sticker"
               components={[<strong>text</strong>]}
             />
-          </AnchorButton>
+          </a>
         </Link>
       </p>
     </Layout>

@@ -1,6 +1,5 @@
 @import '~reset-css/reset.css';
-@import '~semantic-ui-css/components/form.min.css';
-@import '~semantic-ui-css/components/message.min.css';
+@import '~spectre.css/dist/spectre.min.css';
 
 html,
 body,
@@ -9,98 +8,26 @@ body,
   height: 100%;
 }
 
-#__next {
+body {
   background: #fff;
   color: #000;
+  font-family: "Public Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  font-size: 1rem;
 }
 
-#__next,
-.ui.message .header {
-  font-family: Public Sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-h1 {
-  font-size: 2.4rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.7rem;
-}
-
-p {
-  margin-top: 15px;
-}
-
-p + h1,
-p + h2,
-p + h3,
-p + form {
-  margin-top: 25px;
+input,
+button,
+textarea {
+  font-weight: 300;
 }
 
 strong {
-  font-weight: 400;
-}
-
-.ui.form .field > label,
-.ui.form .inline.field > label,
-.ui.form .inline.field > p,
-.ui.form .inline.fields .field > label,
-.ui.form .inline.fields .field > p,
-.ui.form .inline.fields > label {
-  font-weight: 400;
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-.ui.form textarea:focus,
-.ui.form input:not([type]):focus,
-.ui.form input[type=date]:focus,
-.ui.form input[type=datetime-local]:focus,
-.ui.form input[type=email]:focus,
-.ui.form input[type=file]:focus,
-.ui.form input[type=number]:focus,
-.ui.form input[type=password]:focus,
-.ui.form input[type=search]:focus,
-.ui.form input[type=tel]:focus,
-.ui.form input[type=text]:focus,
-.ui.form input[type=time]:focus,
-.ui.form input[type=url]:focus {
-  border-color: #686de0;
-}
-
-.ui.form .field,
-.ui.form .field:last-child {
-  margin: 0 0 1em;
-}
-
-.ui.message .header,
-.ui.message .header:not(.ui) {
   font-weight: 500;
-  font-size: 1rem;
 }
 
-a {
-  color: #686de0;
-}
-
-a:hover {
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
 }
 
 #nprogress {
@@ -108,7 +35,7 @@ a:hover {
 }
 
 #nprogress .bar {
-  background: #686de0;
+  background: #5655D5;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -123,7 +50,7 @@ a:hover {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #686de0, 0 0 5px #686de0;
+  box-shadow: 0 0 10px #5655D5, 0 0 5px #5655D5;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
       -ms-transform: rotate(3deg) translate(0px, -4px);

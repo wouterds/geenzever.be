@@ -10,7 +10,7 @@ export const Question = styled.div`
 
   em {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   p + p {
