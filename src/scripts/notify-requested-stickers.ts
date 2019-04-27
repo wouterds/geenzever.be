@@ -39,7 +39,7 @@ import { t } from 'services/translation';
           firstName,
           lastName,
           street,
-          bus,
+          bus: bus ? bus : '',
           postalCode,
           city,
           url,
@@ -54,10 +54,10 @@ import { t } from 'services/translation';
           lastName,
           email,
           street,
-          bus,
+          bus: bus ? bus : '',
           postalCode,
           city,
-          note,
+          note: note ? note : '',
         }),
       );
 

@@ -24,7 +24,7 @@ import { t } from 'services/translation';
           firstName: stickerRequest.firstName,
           lastName: stickerRequest.lastName,
           street: stickerRequest.street,
-          bus: stickerRequest.bus,
+          bus: stickerRequest.bus ? stickerRequest.bus : '',
           postalCode: stickerRequest.postalCode,
           city: stickerRequest.city,
         }),
