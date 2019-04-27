@@ -77,7 +77,7 @@ export default function withContainer<Props>(
 
       // fetch again now confirmed
       stickerRequest = await getStickerRequest(id);
-    } else {
+    } else if (res) {
       res.statusCode = INTERNAL_SERVER_ERROR;
     }
 
