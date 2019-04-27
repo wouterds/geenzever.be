@@ -30,6 +30,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+.btn.btn-primary {
+  background: #222;
+  border-color: #111;
+}
+
+.btn.btn-primary:hover {
+  background: #111;
+  border-color: #000;
+}
+
 #nprogress {
   pointer-events: none;
 }
