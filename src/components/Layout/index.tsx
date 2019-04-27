@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles';
 import 'styles/base.css';
-import 'styles/fonts.css';
 import Footer from '../Footer';
 import Header from '../Header';
 import { Container, Main } from './styles';
