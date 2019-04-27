@@ -3,6 +3,7 @@ import { promisify } from 'util';
 
 const client = redis.createClient({
   host: process.env.REDIS_HOST,
+  prefix: process.env.REDIS_PREFIX,
 });
 
 const setAsync = promisify(client.set).bind(client);
