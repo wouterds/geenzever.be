@@ -5,7 +5,6 @@ import cors from 'cors';
 import express from 'express';
 import next from 'next';
 import sentry from 'services/sentry';
-import translation from 'services/translation';
 import handlers from './handlers';
 
 const port = process.env.PORT || 3000;
@@ -38,8 +37,6 @@ app
       if (e) {
         throw e;
       }
-
-      translation.init();
 
       // tslint:disable-next-line
       console.log(`> Ready on http://localhost:${port}`);

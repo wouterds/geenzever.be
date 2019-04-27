@@ -7,3 +7,6 @@ register({
   baseUrl: tsConfig.compilerOptions.baseUrl,
   paths: tsConfig.compilerOptions.paths,
 });
+
+// tslint:disable-next-line
+require('services/translation').init();
