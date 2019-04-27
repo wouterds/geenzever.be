@@ -1,4 +1,4 @@
-// tslint:disable-next-line
+// tslint:disable
 require('dotenv').config();
 import { register } from 'tsconfig-paths';
 import tsConfig from '../tsconfig.json';
@@ -8,5 +8,4 @@ register({
   paths: tsConfig.compilerOptions.paths,
 });
 
-// tslint:disable-next-line
 require('services/translation').init();
