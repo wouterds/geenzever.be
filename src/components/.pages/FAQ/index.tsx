@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Container, Question } from './styles';
+import { withAmp } from 'next/amp';
 
 const SupportLink = ({ children }: { children: ReactNode }) => (
   <span>
@@ -96,4 +97,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default withAmp(FAQ, { hybrid: true });
