@@ -10,7 +10,11 @@
     "notify:requested-stickers": "ts-node -r ./src/bootstrap ./src/scripts/notify-requested-stickers",
     "notify:dispatched-stickers": "ts-node -r ./src/bootstrap ./src/scripts/notify-dispatched-stickers",
     "dev": "next ./src",
-    "server": "NODE_ENV=production node -r ./src/bootstrap ./src/server"
+    "server": "NODE_ENV=production node -r ./src/bootstrap ./src/server",
+    "version:patch": "json-bump package.json --patch && npm run version:_",
+    "version:minor": "json-bump package.json --minor && npm run version:_",
+    "version:major": "json-bump package.json --major && npm run version:_",
+    "version:_": "npm i && git add package*.json -p && git commit -m \":bookmark: $(node -p \"require('./package.json').version\")\" && git tag $(node -p \"require('./package.json').version\")"
   },
   "dependencies": {
     "@sentry/browser": "^5.1.1",
