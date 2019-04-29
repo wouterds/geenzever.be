@@ -1,7 +1,8 @@
 // import { useEffect, useState } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
-import { Container } from './styles';
 import Link from 'next/link';
+import { ReactNode } from 'react';
+import { Trans } from 'react-i18next';
+import { Container } from './styles';
 
 const SupportLink = ({ children }: { children: ReactNode }) => (
   <span>
@@ -12,7 +13,6 @@ const SupportLink = ({ children }: { children: ReactNode }) => (
 );
 
 export default () => {
-  const { t } = useTranslation();
   // const [isVisible, setIsVisible] = useState(false);
 
   // useEffect(() => {
@@ -26,7 +26,10 @@ export default () => {
   return (
     <Container>
       <i className="icon icon-message" />
-      <Trans i18nKey="feedback.notice" components={[<SupportLink>text</SupportLink>]} />
+      <Trans
+        i18nKey="feedback.notice"
+        components={[<SupportLink>text</SupportLink>]}
+      />
     </Container>
   );
 };
