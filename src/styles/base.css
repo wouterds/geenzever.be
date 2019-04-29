@@ -35,7 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #111;
 }
 
-.btn.btn-primary:hover {
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
   background: #111;
   border-color: #000;
 }
