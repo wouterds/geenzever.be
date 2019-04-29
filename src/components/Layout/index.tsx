@@ -1,3 +1,4 @@
+import Notice from 'components/Notice';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -40,6 +41,8 @@ const Layout = (props: Props) => {
 
       <ThemeProvider theme={theme}>
         <Container>
+          <Notice />
+
           <Header />
 
           <Main className="container" role="main">
