@@ -16,15 +16,10 @@ export const Container = styled.div`
   }
 
   i {
-    display: none;
-    margin-right: 10px;
+    margin-right: 0.35rem;
   }
 
   ${breakpoint('sm')`
     padding: 12px 35px;
-
-    i {
-      display: inline-block;
-    }
   `}
 `;
