@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #nprogress .bar {
-  background: #5655D5;
+  background: #000;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #5655D5, 0 0 5px #5655D5;
+  box-shadow: 0 0 10px #000, 0 0 5px #000;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
       -ms-transform: rotate(3deg) translate(0px, -4px);
