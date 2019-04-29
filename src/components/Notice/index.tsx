@@ -1,6 +1,15 @@
 // import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { Container } from './styles';
+import Link from 'next/link';
+
+const SupportLink = ({ children }: { children: ReactNode }) => (
+  <span>
+    <Link href="/support" prefetch>
+      <a>{children}</a>
+    </Link>
+  </span>
+);
 
 export default () => {
   const { t } = useTranslation();
@@ -17,7 +26,7 @@ export default () => {
   return (
     <Container>
       <i className="icon icon-message" />
-      {t('feedback.notice')}
+      <Trans i18nKey="feedback.notice" components={[<SupportLink>text</SupportLink>]} />
     </Container>
   );
 };

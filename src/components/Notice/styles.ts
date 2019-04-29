@@ -6,6 +6,15 @@ export const Container = styled.div`
   font-weight: 500;
   padding: 10px 25px;
 
+  a {
+    color: #000;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   i {
     display: none;
     margin-right: 10px;
