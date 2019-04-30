@@ -34,7 +34,7 @@ export const getRecentlyAdded = async (): Promise<Definition[]> => {
   const stickerRequests = await StickerRequest.findAll({
     where: {
       createdAt: {
-        [Op.between]: [subMinutes(new Date(), 15), new Date()],
+        [Op.between]: [subMinutes(new Date(), 5), new Date()],
       },
     },
   });
@@ -48,7 +48,7 @@ export const getRecentlyDispatched = async (): Promise<Definition[]> => {
   const stickerRequests = await StickerRequest.findAll({
     where: {
       dispatchedAt: {
-        [Op.between]: [subMinutes(new Date(), 15), new Date()],
+        [Op.between]: [subMinutes(new Date(), 5), new Date()],
       },
     },
   });
