@@ -10,7 +10,8 @@
   },
   "cta": {
     "request-sticker": "Vraag nu je <0>gratis</0> sticker aan!",
-    "send": "Verzenden!"
+    "send": "Verzenden!",
+    "close": "Sluiten"
   },
   "nav": {
     "stickers": "Stickers",
@@ -40,7 +41,6 @@
     "note": "Optioneel: als je nog iets anders te zeggen hebt dan kan dat hier!"
   },
   "feedback": {
-    "notice": "Door onverwacht succes en een te kort aan geld zijn alle stickers momenteel op. Iedereen die voor 29/04/2019 een sticker heeft aangevraagd kan deze wel nog in de bus verwachten komende dagen. Er is nog ongeveer €75 nodig om een nieuwe batch stickers te financieren, <0>en alle beetjes helpen</0>.",
     "bad-request": "Controleer of alle velden correct zijn ingevuld.",
     "already-requested": "Het ziet er naar uit dat je al een sticker hebt aangevraagd.",
     "generic-error": "Er ging iets mis, probeer het later opnieuw.",
@@ -51,6 +51,10 @@
       "rejected": "Je stickeraanvraag werd afgekeurd.",
       "sent": "Je sticker werd op {{dispatchedAt}} verzonden!"
     }
+  },
+  "notice": {
+    "title": "Een zwarte zondag",
+    "text": "Arm Vlaanderen.<br />Extreem rechts rukt op, en bovendien zijn mijn stickers en geld ook op.<br /><br />Helaas komen er niet genoeg donaties binnen om dit draaiende te houden, en nu extreem rechts toch de verkiezingen heeft gewonnen wil ik er verder zelf ook geen tijd en geld meer in investeren.<br /><br />Bedankt aan iedereen die een sticker kleefde en heeft mee gedaan met dit ludiek prostest, jammer dat het mocht niet baten. Al ben ik wel trots op Gent.<br /><br />PS: Als je echt graag nog stickers wilt dan kan ik er wel nog laten bijmaken speciaal voor jou (€25 voor 50), laat maar weten via donatie."
   },
   "mail": {
     "stickers-requested": {

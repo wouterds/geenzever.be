@@ -41,7 +41,7 @@ const Layout = (props: Props) => {
 
       <ThemeProvider theme={theme}>
         <Container>
-          {/* <Notice /> */}
+          <Notice />
 
           <Header />
 
