@@ -33,7 +33,7 @@ jobs:
           name: Push images
           command: |
             if [ "$CIRCLE_BRANCH" == "master" ]; then
-              docker login $DOCKER_REGISTRY_HOST -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD
+              docker login $DOCKER_REGISTRY_HOST -u $DOCKER_REGISTRY_USER -p $DOCKER_REGISTRY_PASS
               make push
             fi
       - run:
