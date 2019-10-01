@@ -13,6 +13,7 @@ all: build
 clean:
 	-rm -rf node_modules
 	-rm -rf dist
+	-rm -rf qemu-arm-static
 
 node_modules: package.json
 	docker run --rm -v $(PWD):/code -v ~/.ssh:/root/.ssh -w /code node:10-slim npm install
@@ -20,7 +21,12 @@ node_modules: package.json
 lint: node_modules
 	docker run --rm -v $(PWD):/code -w /code node:10-slim npm run lint
 
-.build-app: node_modules
+qemu-arm-static:
+	docker run --rm --privileged multiarch/qemu-user-static:register --reset
+	curl -OL https://github.com/multiarch/qemu-user-static/releases/download/v4.1.0-1/qemu-arm-static
+	chmod +x qemu-arm-static
+
+.build-app: qemu-arm-static node_modules
 	docker run --rm -v $(PWD):/code -w /code --env=VERSION=$(VERSION) --env=BASE_URL=$(BASE_URL) --env=API_BASE_URL=$(API_BASE_URL) --env=MODE=$(MODE) --env=SENTRY_DSN=$(SENTRY_DSN) --env=GA_TRACKING_ID=$(GA_TRACKING_ID) node:10-slim npm run build
 	touch .build-app
 
