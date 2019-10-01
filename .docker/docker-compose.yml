@@ -11,12 +11,12 @@ services:
     networks:
       - default
       - webproxy
-    mem_limit: 8m
+    mem_limit: 16m
 
   node:
     image: docker.wouterdeschuyter.be/geenzever-node
     env_file: .env
-    mem_limit: 256m
+    mem_limit: 64m
     networks:
       - default
       - mariadb
